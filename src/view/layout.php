@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Autovrij</title>
+    <title>Week van de mobiliteit</title>
     <?php echo $css;?>
   </head>
   <body>

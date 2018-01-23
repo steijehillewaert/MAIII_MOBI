@@ -9,12 +9,13 @@
   <section>
     <?php foreach($events as $event): ?>
       <article>
-        <?php echo $event['title']; ?>
-        <?php echo $event['city'];?>
-        <?php echo date('d/m', strtotime($event['start']));?>
+        <h3><?php echo $event['title']; ?></h3>
+        <h4><?php echo $event['city'];?></h4>
+        <h4><?php echo date('d/m', strtotime($event['start']));?></h4>
+        <a href="index.php?page=detail&amp;id=<?php echo($event['id']); ?>">Meer info</a>
       </article>
     <? endforeach;?>
-    <a href="#">Volledige programma</a>
+    <a href="index.php?page=programma">Volledige programma</a>
   </section>
   <section>
     <img src="#" alt="">
