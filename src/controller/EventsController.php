@@ -88,7 +88,7 @@ class EventsController extends Controller {
     $this->set('events', $events);
   }
 
-  public function event() {
+  public function detail() {
 
   }
 
