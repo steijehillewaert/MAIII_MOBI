@@ -82,4 +82,14 @@ class EventsController extends Controller {
     $this->set('events', $events);
   }
 
+  public function programma() {
+    $conditions = array();
+    $events = $this->eventDAO->search($conditions);
+    $this->set('events', $events);
+  }
+
+  public function event() {
+
+  }
+
 }
