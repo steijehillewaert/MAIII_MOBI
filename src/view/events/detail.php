@@ -1,4 +1,4 @@
-<header>
+<header style="background:url(assets/events/<?php echo $events['code'];?>/banner.jpg)">
   <h1><?php echo($events['title']);?></h1>
   <div>
     <ul>
@@ -33,8 +33,9 @@
   </aside>
 
   <section>
-    <img src="" alt="">
-    <img src="" alt="">
+    <p>hey</p>
+    <img src="assets/events/<?php echo $events['code'];?>/big1.jpg" alt="">
+    <img src="assets/events/<?php echo $events['code'];?>/big2.jpg" alt="">
     <article>
       <h2>Praktisch</h2>
       <p><?php echo $events['practical']; ?></p>
