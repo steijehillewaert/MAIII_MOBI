@@ -1,4 +1,5 @@
 @import 'reset';
+@import 'vars';
 
 html {
   box-sizing: border-box;
@@ -7,4 +8,194 @@ html {
 
 *, *::before, *::after { /* stylelint-disable-line */
   box-sizing: inherit;
+}
+
+body {
+  font-family: AvenirNext, sans-serif;
+  font-weight: 200;
+}
+
+.container {
+  width: 96rem;
+  align-items: center;
+  margin: 0 auto;
+}
+
+nav {
+  padding: 2rem 0;
+
+  & a {
+    font-size: 1.6rem;
+    font-family: AvenirNext, helvetica, sans-serif;
+    font-weight: 300;
+    color: white;
+    text-decoration: none;
+
+    &:hover {
+      color: var(--pink);
+    }
+  }
+
+  & .active {
+    color: var(--pink);
+  }
+}
+
+header {
+  background-color: black;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+ul {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+li {
+  margin-right: 2rem;
+}
+
+.blue {
+  background-color: var(--blue);
+}
+
+.green {
+  background-color: var(--green);
+}
+
+.news {
+  display: grid;
+}
+
+h1 {
+  font-family: Texgyreschola, times, serif;
+  font-size: 6rem;
+  color: white;
+}
+
+h2 {
+  font-family: Texgyreschola, times, serif;
+}
+
+.programma {
+  display: flex;
+  align-items: center;
+  background: url(../assets/img/programma.jpg);
+  height: 25rem;
+  background-size: cover;
+  background-position: 0 56rem;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  padding: 7rem;
+
+  & form {
+    margin-top: 3rem;
+  }
+}
+
+.event {
+  min-width: 30rem;
+  min-height: 30rem;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.events {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.event_title {
+  font-family: AvenirNext, sans-serif;
+}
+
+.event_container {
+  background-color: rgba(40, 178, 155, .9);
+  height: 15rem;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+.date_event {
+  color: white;
+  font-family: AvenirNext, sans-serif;
+  font-weight: 400;
+  align-self: flex-end;
+  font-size: 2rem;
+  margin: 1rem;
+  background-color: var(--blue);
+  padding: 1rem;
+}
+
+textarea:focus, input:focus {
+  outline: none;
+}
+
+*:focus { /*stylelint-disable-line*/
+  outline: none;
+}
+
+input {
+  border: 0;
+  padding: 1rem;
+  height: 3.5rem;
+}
+
+.search {
+  width: 3.5rem;
+  height: 3.5rem;
+  background: url(../assets/img/search.svg);
+}
+
+.socialbutton {
+  margin-top: 1rem;
+  margin-left: 1rem;
+  width: 3rem;
+  height: 3rem;
+}
+
+.search_field {
+  color: white;
+  background-color: rgba(255, 255, 255, .2);
+}
+
+footer {
+  background: black;
+  color: white;
+}
+
+.footer {
+  padding: 3rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.social {
+  text-align: right;
+}
+
+h3 {
+  font-size: 1.8rem;
+}
+
+.small {
+  font-size: 1.2rem;
+}
+
+.nieuwsbrief p {
+  margin-bottom: 1rem;
+}
+
+.send {
+  background-color: var(--pink);
+  color: white;
 }
