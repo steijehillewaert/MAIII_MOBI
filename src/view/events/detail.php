@@ -17,9 +17,10 @@
   <aside>
     <h3>Tags</h3>
     <ul>
-      <?php foreach($events['tags'] as $tag): ?>
+      <?php foreach($event['tags'] as $tag): ?>
         <li><?php echo $tag['tag'];?></li>
       <?php endforeach;?>
+      </ul>
     </ul>
     <address>
       <?php echo $events['address'];?> <br>
