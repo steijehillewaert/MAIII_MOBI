@@ -2,6 +2,13 @@
 require_once __DIR__ . '/DAO.php';
 class EventDAO extends DAO {
 
+  public function selectAll() {
+    $sql = 'SELECT * FROM `ma3_auto_events`';
+    $stmt = $this->pdo->prepare($sql);
+    $stmt->execute();
+    return $stmt->fetchAll(PDO::FETCH_ASSOC);
+  }
+
   public function search($conditions = array()) {
     $sql = "SELECT DISTINCT
       ma3_auto_events.*
