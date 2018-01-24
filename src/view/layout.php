@@ -16,7 +16,7 @@
           </ul>
         </nav>
         <form class="" action="?page=programma" method="post">
-          <input type="text" name="query" value="Zoek een actie" id="search">
+          <input type="text" name="query" placeholder="Zoek een actie" id="search">
           <input type="submit" name="action" value="zoek">
         </form>
       </header>
