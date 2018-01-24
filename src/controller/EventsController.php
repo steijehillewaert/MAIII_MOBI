@@ -12,6 +12,12 @@ class EventsController extends Controller {
   }
 
   public function index() {
+
+    $eventDAO = new EventDAO();
+    $eventHighlights = $eventDAO->selectThree();
+    $this->set('eventHighlights', $eventHighlights);
+
+
     $conditions = array();
 
 
