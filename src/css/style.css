@@ -149,6 +149,18 @@ input {
   height: 3.5rem;
 }
 
+select {
+  margin-right: 1rem;
+  color: #75757b;
+  border: 0;
+  padding: 1rem;
+  height: 3.7rem;
+  overflow: hidden;
+  background: url(../assets/img/dropdown.svg) no-repeat 100% 0 white;
+  width: 15rem;
+  -webkit-appearance: none; /*stylelint-disable-line*/
+}
+
 .search {
   width: 3.5rem;
   height: 3.5rem;
