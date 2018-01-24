@@ -1,0 +1,41 @@
+/* stylelint-disable */
+
+@font-face {
+  font-family: 'AvenirNext';
+  font-style: normal;
+  font-weight: 200;
+  src:  url('AvenirNext/AvenirNext-Medium.woff2') format('woff2'),
+       url('AvenirNext/AvenirNext-Medium.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'AvenirNext';
+  font-style: normal;
+  font-weight: 300;
+  src:  url('AvenirNext/AvenirNext-DemiBold.woff2') format('woff2'),
+       url('AvenirNext/AvenirNext-DemiBold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'AvenirNext';
+  font-style: normal;
+  font-weight: 400;
+  src:  url('AvenirNext/AvenirNext-Bold.woff2') format('woff2'),
+       url('AvenirNext/AvenirNext-Bold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'AvenirNext';
+  font-style: normal;
+  font-weight: 500;
+  src:  url('AvenirNext/AvenirNext-Heavy.woff2') format('woff2'),
+       url('AvenirNext/AvenirNext-Heavy.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Texgyreschola';
+  font-style: normal;
+  font-weight: 400;
+  src:  url('Texgyreschola/texgyreschola-bold.woff2') format('woff2'),
+       url('Texgyreschola/texgyreschola-bold.woff') format('woff');
+}
