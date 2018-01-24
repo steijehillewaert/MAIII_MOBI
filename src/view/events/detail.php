@@ -34,7 +34,6 @@
   </aside>
 
   <section>
-    <p>hey</p>
     <img src="assets/events/<?php echo $events['code'];?>/big1.jpg" alt="">
     <img src="assets/events/<?php echo $events['code'];?>/big2.jpg" alt="">
     <article>
