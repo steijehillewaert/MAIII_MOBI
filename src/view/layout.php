@@ -15,9 +15,9 @@
             <li><a href="#">Partners</a></li>
           </ul>
         </nav>
-        <form class="" action="#" method="post">
-          <input type="text" name="" value="">
-          <input type="submit" name="Zoek" value="zoek">
+        <form class="" action="?page=programma" method="post">
+          <input type="text" name="query" value="Zoek een actie" id="search">
+          <input type="submit" name="action" value="zoek">
         </form>
       </header>
 

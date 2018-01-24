@@ -14,12 +14,7 @@ class EventsController extends Controller {
   public function index() {
     $conditions = array();
 
-    // example: search on title
-    // $conditions[] = array(
-    //   'field' => 'title',
-    //   'comparator' => 'like',
-    //   'value' => 'leie'
-    // );
+
 
     //example: search on organiser_id
     // $conditions[] = array(
@@ -84,6 +79,16 @@ class EventsController extends Controller {
 
   public function programma() {
     $conditions = array();
+
+    // example: search on title
+    if (isset($_POST['query'])) {
+      $conditions[] = array(
+        'field' => 'title',
+        'comparator' => 'like',
+        'value' => $_POST['query']
+      );
+    }
+
     $events = $this->eventDAO->search($conditions);
     $this->set('events', $events);
   }
