@@ -6,17 +6,19 @@
 
 <main>
   <h2>Uitgelichte activeiteiten</h2>
-  <section class="container">
-    <?php foreach($events as $event): ?>
-      <article>
-        <h3><?php echo $event['title']; ?></h3>
-        <h4><?php echo $event['city'];?></h4>
-        <h4><?php echo date('d/m', strtotime($event['start']));?></h4>
-        <a href="index.php?page=detail&amp;id=<?php echo($event['id']); ?>">Meer info</a>
-      </article>
-    <? endforeach;?>
-    <a href="index.php?page=programma">Volledige programma</a>
+  <section class="events container">
+  <?php foreach($eventHighlights as $eventHighlight): ?>
+    <article class="event" style="background:url(assets/events/<?php echo $eventHighlight['code'];?>/thumb.jpg)">
+      <h2 class="date_event"><?php echo date('d/m', strtotime($eventHighlight['start']));?></h2>
+      <div class="event_container">
+        <h2 class="event_title"><?php echo $eventHighlight['title']; ?></h2>
+        <a href="index.php?page=detail&amp;id=<?php echo $eventHighlight['id']; ?>">Meer info</a>
+      </div>
+    </article>
+  <? endforeach;?>
+  <a href="index.php?page=programma">Volledige programma</a>
   </section>
+
   <section class="container">
     <img src="#" alt="">
     <h2>Wat is de week van de mobiliteit?</h2>
