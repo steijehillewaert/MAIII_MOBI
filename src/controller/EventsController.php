@@ -89,6 +89,14 @@ class EventsController extends Controller {
       );
     }
 
+    if (isset($_POST['postal'])) {
+      $conditions[] = array(
+        'field' => 'postal',
+        'comparator' => 'like',
+        'value' => $_POST['postal']
+      );
+    }
+
     $events = $this->eventDAO->search($conditions);
     $this->set('events', $events);
   }
