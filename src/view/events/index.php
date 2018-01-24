@@ -6,7 +6,7 @@
 
 <main>
   <h2>Uitgelichte activeiteiten</h2>
-  <section>
+  <section class="container">
     <?php foreach($events as $event): ?>
       <article>
         <h3><?php echo $event['title']; ?></h3>
@@ -17,13 +17,13 @@
     <? endforeach;?>
     <a href="index.php?page=programma">Volledige programma</a>
   </section>
-  <section>
+  <section class="container">
     <img src="#" alt="">
     <h2>Wat is de week van de mobiliteit?</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pretium neque ante, id volutpat metus pulvinar non. Fusce quis magna fringilla, volutpat est eget, congue tortor. Phasellus ac pellentesque arcu, feugiat ultrices nisl. Suspendisse potenti. </p>
     <a href="#">Ontdek de week van de mobiliteit</a>
   </section>
-  <section>
+  <section class="news">
     <div class="blue">
       <h3>Dien je actie in voor <br>
         de week van de mobiliteit 2018</h3>
