@@ -17,7 +17,7 @@
   <aside>
     <h3>Tags</h3>
     <ul>
-      <?php foreach($event['tags'] as $tag): ?>
+      <?php foreach($events['tags'] as $tag): ?>
         <li><?php echo $tag['tag'];?></li>
       <?php endforeach;?>
       </ul>
