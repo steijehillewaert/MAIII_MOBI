@@ -193,6 +193,7 @@ select {
 }
 
 footer {
+  margin-top: 4rem;
   background: black;
   color: white;
 }
@@ -253,8 +254,8 @@ h3 {
 aside {
   color: white;
   background-color: var(--blue);
-  min-width: 20rem;
-  padding: 1rem;
+  min-width: 24rem;
+  padding: 3rem;
   margin-left: 2rem;
   align-self: flex-start;
   margin-top: 4rem;
@@ -297,6 +298,7 @@ aside address {
 .gray {
   padding: 3rem 0;
   background-color: #f1f0ef;
+  margin-bottom: 4rem;
 }
 
 .images_pratical {
@@ -332,9 +334,17 @@ aside address {
   height: 25rem;
   padding: 7rem;
   background-size: cover !important; /*stylelint-disable-line*/
+  background-position: center !important; /*stylelint-disable-line*/
 }
 
 .detail p {
   margin-right: 7rem;
+}
+
+.detail_banner {
+  text-shadow: .1rem .1rem .3rem rgba(0, 0, 0, .5);
+}
+
+.detail {
   margin-bottom: 4rem;
 }
