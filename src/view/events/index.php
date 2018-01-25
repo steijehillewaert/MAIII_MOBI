@@ -12,10 +12,11 @@
       <h2 class="date_event"><?php echo date('d/m', strtotime($eventHighlight['start']));?></h2>
       <div class="event_container">
         <h2 class="event_title"><?php echo $eventHighlight['title']; ?></h2>
-        <a href="index.php?page=detail&amp;id=<?php echo $eventHighlight['id']; ?>">Meer info</a>
+        <p class="shortinfo"><?php echo $eventHighlight['content'] ?></p>
+        <a href="index.php?page=detail&amp;id=<?php echo $eventHighlight['id']; ?>" class="event_link">Meer info</a>
       </div>
     </article>
-  <? endforeach;?>
+  <?php endforeach;?>
   <a href="index.php?page=programma">Volledige programma</a>
   </section>
 
