@@ -33,15 +33,29 @@
     </ul>
   </aside>
 
-  <section>
-    <img src="assets/events/<?php echo $events['code'];?>/big1.jpg" alt="">
-    <img src="assets/events/<?php echo $events['code'];?>/big2.jpg" alt="">
-    <article>
-      <h2>Praktisch</h2>
-      <p><?php echo $events['practical']; ?></p>
-    </article>
+  <section class="gray">
+    <div class="class="container"">
+      <img src="assets/events/<?php echo $events['code'];?>/big1.jpg" alt="">
+      <img src="assets/events/<?php echo $events['code'];?>/big2.jpg" alt="">
+      <article>
+        <h2>Praktisch</h2>
+        <p><?php echo $events['practical']; ?></p>
+      </article>
+    </div>
   </section>
-  <section>
+  <div class="container">
     <h2>Aanbevolen activeiteiten</h2>
+  </div>
+  <section class="events container">
+    <?php foreach($eventHighlights as $eventHighlight): ?>
+      <article class="event" style="background:url(assets/events/<?php echo $eventHighlight['code'];?>/thumb.jpg)">
+        <h2 class="date_event"><?php echo date('d/m', strtotime($eventHighlight['start']));?></h2>
+        <div class="event_container">
+          <h2 class="event_title"><?php echo $eventHighlight['title']; ?></h2>
+          <p class="shortinfo"><?php echo $eventHighlight['content'] ?></p>
+          <a href="index.php?page=detail&amp;id=<?php echo $eventHighlight['id']; ?>" class="event_link">Meer info</a>
+        </div>
+      </article>
+    <?php endforeach;?>
   </section>
 </main>
