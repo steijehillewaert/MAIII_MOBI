@@ -25,8 +25,8 @@
         <div class="container header">
           <nav>
             <ul>
-              <li><a href="index.php">#weekvandemobiliteit</a></li>
-              <li><a href="index.php?page=programma">Programma</a></li>
+              <li><a href="index.php" class="<?php if($currentPage == 'index') echo ' active';?>">#weekvandemobiliteit</a></li>
+              <li><a href="index.php?page=programma" class="<?php if($currentPage == 'programma') echo ' active';?>">Programma</a></li>
               <li><a href="#">Info</a></li>
               <li><a href="#">Partners</a></li>
             </ul>

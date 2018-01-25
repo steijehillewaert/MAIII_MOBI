@@ -13,6 +13,8 @@ class EventsController extends Controller {
 
   public function index() {
 
+    $this->set('currentPage', 'index');
+
     $eventDAO = new EventDAO();
     $eventHighlights = $eventDAO->selectThree();
     $this->set('eventHighlights', $eventHighlights);
@@ -84,6 +86,9 @@ class EventsController extends Controller {
   }
 
   public function programma() {
+
+    $this->set('currentPage', 'programma');
+
     $conditions = array();
 
     // example: search on title
@@ -108,6 +113,9 @@ class EventsController extends Controller {
   }
 
   public function detail() {
+
+    $this->set('currentPage', 'programma');
+
     $events = $this->eventDAO->selectById($_GET['id']);
     $this->set('events', $events);
 
