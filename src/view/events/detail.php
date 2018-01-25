@@ -1,5 +1,7 @@
-<header style="background:url(assets/events/<?php echo $events['code'];?>/banner.jpg)">
-  <h1><?php echo($events['title']);?></h1>
+<header style="background:url(assets/events/<?php echo $events['code'];?>/banner.jpg)" class="header_detail">
+  <div class="container">
+    <h1><?php echo($events['title']);?></h1>
+  </div>
   <div>
     <ul>
       <li><?php echo($events['city']);?></li>
@@ -9,9 +11,9 @@
     </ul>
   </div>
 </header>
-<main class="flex container">
+<main class="flex container detail">
   <section>
-    <h2>Info</h2>
+    <h2 class="detail_title">Info</h2>
     <p><?php echo $events['content'];?></p>
   </section>
   <aside>
@@ -41,10 +43,12 @@
 </main>
 
   <section class="gray">
-    <div class="class="container"">
-      <img src="assets/events/<?php echo $events['code'];?>/big1.jpg" alt="">
-      <img src="assets/events/<?php echo $events['code'];?>/big2.jpg" alt="">
-      <article>
+    <div class="container pratical">
+      <div class="images_pratical">
+        <img src="assets/events/<?php echo $events['code'];?>/big1.jpg" alt="">
+        <img src="assets/events/<?php echo $events['code'];?>/big2.jpg" alt="">
+      </div>
+      <article class="pratical_text">
         <h2>Praktisch</h2>
         <p><?php echo $events['practical']; ?></p>
       </article>
