@@ -348,6 +348,10 @@ aside address {
   & a {
     text-decoration: none;
     color: white;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }
 
