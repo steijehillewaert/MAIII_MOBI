@@ -31,7 +31,7 @@
               <li><a href="#">Partners</a></li>
             </ul>
           </nav>
-          <form class="" action="?page=programma" method="post">
+          <form class="" action="?page=programma" method="get">
             <input type="text" name="query" placeholder="Zoek een actie" id="search" class="search_field">
             <input type="submit" name="action" value=" " class="search">
           </form>

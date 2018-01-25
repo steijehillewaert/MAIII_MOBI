@@ -87,19 +87,19 @@ class EventsController extends Controller {
     $conditions = array();
 
     // example: search on title
-    if (isset($_POST['query'])) {
+    if (isset($_GET['query'])) {
       $conditions[] = array(
         'field' => 'title',
         'comparator' => 'like',
-        'value' => $_POST['query']
+        'value' => $_GET['query']
       );
     }
 
-    if (isset($_POST['postal'])) {
+    if (isset($_GET['postal'])) {
       $conditions[] = array(
         'field' => 'postal',
         'comparator' => 'like',
-        'value' => $_POST['postal']
+        'value' => $_GET['postal']
       );
     }
 

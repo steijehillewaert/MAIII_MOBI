@@ -1,7 +1,7 @@
 <section class="programma container">
   <div class="container">
     <h1>Programma</h1>
-    <form class="" action="?page=programma" method="post">
+    <form class="" action="?page=programma" method="get">
     <select name='date' id='date'>
       <option disabled selected>Kies een datum</option>
       <?php foreach($events as $event): ?>
