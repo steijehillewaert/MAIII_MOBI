@@ -1,16 +1,16 @@
 <header style="background:url(assets/events/<?php echo $events['code'];?>/banner.jpg)" class="header_detail">
-  <div class="container">
+  <div class="container title">
     <h1 class="detail_banner"><?php echo($events['title']);?></h1>
   </div>
-  <div>
-    <ul>
-      <li><?php echo($events['city']);?></li>
-      <li><?php echo date('d/m/Y', strtotime($events['start']));?></li>
-      <li><?php echo date('G:i', strtotime($events['start']));?> - <?php echo date('G:i', strtotime($events['end']));?></li>
-      <li><a href="<?php echo $events['link'];?>" target="_blank">Link</a></li>
-    </ul>
-  </div>
 </header>
+<div class="detail_info">
+  <ul class="container detail_info-items">
+    <li><?php echo($events['city']);?></li>
+    <li><?php echo date('d/m/Y', strtotime($events['start']));?></li>
+    <li><?php echo date('G:i', strtotime($events['start']));?> - <?php echo date('G:i', strtotime($events['end']));?></li>
+    <li><a href="<?php echo $events['link'];?>" target="_blank">Link</a></li>
+  </ul>
+</div>
 <main class="flex container detail">
   <section>
     <h2 class="detail_title">Info</h2>
