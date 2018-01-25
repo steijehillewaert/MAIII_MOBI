@@ -20,7 +20,8 @@
       <h2 class="date_event"><?php echo date('d/m', strtotime($event['start']));?></h2>
       <div class="event_container">
         <h2 class="event_title"><?php echo $event['title']; ?></h2>
-        <a href="index.php?page=detail&amp;id=<?php echo $event['id']; ?>">Meer info</a>
+        <p class="shortinfo"><?php echo $event['content'] ?></p>
+        <a href="index.php?page=detail&amp;id=<?php echo $event['id']; ?>" class="event_link">Meer info</a>
       </div>
     </article>
   <? endforeach;?>
