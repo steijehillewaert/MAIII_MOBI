@@ -333,6 +333,8 @@ aside address {
 }
 
 .header_detail {
+  display: flex;
+  align-items: center;
   height: 40rem;
   padding: 7rem;
   background-size: cover !important; /*stylelint-disable-line*/
