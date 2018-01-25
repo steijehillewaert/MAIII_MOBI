@@ -73,6 +73,7 @@ nav ul li {
 }
 
 .news {
+  margin-top: 4rem;
   display: grid;
   margin-bottom: 4rem;
 }
