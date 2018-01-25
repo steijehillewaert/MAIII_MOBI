@@ -31,7 +31,7 @@
       <a href="#">Ontdek de week van de mobiliteit</a>
     </div>
   </section>
-  <section class="news">
+  <section class="news container">
     <div class="blue">
       <h3>Dien je actie in voor <br>
         de week van de mobiliteit 2018</h3>
