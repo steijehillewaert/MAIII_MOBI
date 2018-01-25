@@ -15,6 +15,10 @@ body {
   font-weight: 200;
 }
 
+p {
+  line-height: 1.4rem;
+}
+
 .container {
   width: 96rem;
   align-items: center;
@@ -98,7 +102,8 @@ h2 {
 }
 
 .event {
-  min-width: 30rem;
+  color: white;
+  width: 30rem;
   min-height: 30rem;
   margin-bottom: 2rem;
   display: flex;
@@ -114,11 +119,14 @@ h2 {
 
 .event_title {
   font-family: AvenirNext, sans-serif;
+  font-weight: 400;
+  font-size: 1.8rem;
+  margin-bottom: .8rem;
 }
 
 .event_container {
   background-color: rgba(40, 178, 155, .9);
-  height: 15rem;
+  height: 17rem;
   display: flex;
   flex-direction: column;
   padding: 2rem;
@@ -210,4 +218,29 @@ h3 {
 .send {
   background-color: var(--pink);
   color: white;
+}
+
+.shortinfo {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical; /* stylelint-disable-line */
+}
+
+.event_link {
+  text-decoration: none;
+  color: white;
+  font-size: 1.4rem;
+  background-color: var(--blue);
+  padding: .6rem;
+  width: 10rem;
+  text-align: center;
+  transition: .2s;
+  margin-top: 1.5rem;
+
+  &:hover {
+    color: var(--blue);
+    background-color: white;
+  }
 }
