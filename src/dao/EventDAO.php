@@ -46,6 +46,8 @@ class EventDAO extends DAO {
         $columnName = 'ma3_auto_tags.id';
       } else if($columnName == 'tag') {
         $columnName = 'ma3_auto_tags.tag';
+      } else if($columnName == 'id') {
+        $columnName = 'ma3_auto_events.id';
       }
       //handle functions
       if(!empty($condition['function'])) {
@@ -87,11 +89,17 @@ class EventDAO extends DAO {
   }
 
   public function selectById($id) {
-    $sql = "SELECT * FROM `ma3_auto_events` WHERE `id` = :id";
-    $stmt = $this->pdo->prepare($sql);
-    $stmt->bindValue(':id', $id);
-    $stmt->execute();
-    return $stmt->fetch(PDO::FETCH_ASSOC);
+    $result = $this->search(array(
+      array(
+        'field' => 'id',
+        'comparator' => '=',
+        'value' => $id
+      )
+    ));
+    if (!empty($result)) {
+      return $result[0];
+    }
+    return false;
   }
 
   private function _getEventIdsFromResult(&$result) {
