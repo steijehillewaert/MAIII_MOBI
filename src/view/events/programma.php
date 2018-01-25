@@ -4,18 +4,23 @@
     <form class="" action="?page=programma" method="get">
       <select name='date' id='date'>
         <option disabled selected>Kies een datum</option>
-        <?php foreach($events as $event): ?>
-          <option><?php echo date('d/m/Y', strtotime($event['start']));?></option>
-          <option><?php echo date('d/m/Y', strtotime($event['end']));?></option>
-        <?php endforeach ?>
+        <option value="09/09/2018">09/09/2018</option>
+        <option value="16/09/2018">16/09/2018</option>
+        <option value="17/09/2018">17/09/2018</option>
+        <option value="18/09/2018">18/09/2018</option>
+        <option value="19/09/2018">19/09/2018</option>
+        <option value="20/09/2018">20/09/2018</option>
+        <option value="21/09/2018">21/09/2018</option>
+        <option value="22/09/2018">22/09/2018</option>
+        <option value="22/09/2018">24/09/2018</option>
       </select>
       <input type="hidden" name="page" value="programma">
-      <input type="submit" name="action" value=" " class="search">
+      <input type="submit" class="search" value=" ">
     </form>
-    <form class="" action="?page=programma" method="get">
+    <form action="?page=programma" method="get">
       <input type="text" name="postal" placeholder="Postcode ..." id="search">
       <input type="hidden" name="page" value="programma">
-      <input type="submit" name="action" value=" " class="search">
+      <input type="submit" class="search" value=" ">
   </form>
   </div>
 </section>

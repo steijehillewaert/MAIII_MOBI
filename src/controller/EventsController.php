@@ -58,16 +58,16 @@ class EventsController extends Controller {
     // );
 
     //example: events on september 17 (includes multi-day events)
-    // $conditions[] = array(
-    //   'field' => 'start',
-    //   'comparator' => '<=',
-    //   'value' => '2018-09-17 23:59:59'
-    // );
-    // $conditions[] = array(
-    //   'field' => 'end',
-    //   'comparator' => '>=',
-    //   'value' => '2018-09-17 00:00:00'
-    // );
+    $conditions[] = array(
+      'field' => 'start',
+      'comparator' => '<=',
+      'value' => '2018-09-17 23:59:59'
+    );
+    $conditions[] = array(
+      'field' => 'end',
+      'comparator' => '>=',
+      'value' => '2018-09-17 00:00:00'
+    );
 
     //example: search on organiser, with certain end date + time
     // $conditions[] = array(
@@ -105,6 +105,21 @@ class EventsController extends Controller {
         'field' => 'postal',
         'comparator' => 'like',
         'value' => $_GET['postal']
+      );
+    }
+
+    if(isset($_GET['date'])) {
+      $conditions[] = array(
+        'field' => 'start',
+        'comparator' => '<=',
+        // 'value' => '2018-09-17 23:59:59'
+        'value' => $_GET['date'] . ' 23:59:59'
+      );
+      $conditions[] = array(
+        'field' => 'end',
+        'comparator' => '>=',
+        // 'value' => '2018-09-17 00:00:00'
+        'value' => $_GET['date'] . ' 00:00:00'
       );
     }
 
