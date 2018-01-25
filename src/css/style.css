@@ -16,6 +16,7 @@ body {
 }
 
 p {
+  font-size: 1.4rem;
   line-height: 1.4rem;
 }
 
@@ -35,14 +36,14 @@ nav {
     color: white;
     text-decoration: none;
 
-    &:hover, .active {
+    &:hover {
       color: var(--pink);
     }
   }
+}
 
-  & .active {
-    color: var(--pink);
-  }
+.active {
+  color: var(--pink);
 }
 
 header {
@@ -54,12 +55,12 @@ header {
   justify-content: space-between;
 }
 
-ul {
+nav ul {
   display: flex;
   flex-wrap: nowrap;
 }
 
-li {
+nav ul li {
   margin-right: 2rem;
 }
 
@@ -243,4 +244,46 @@ h3 {
     color: var(--blue);
     background-color: white;
   }
+}
+
+aside {
+  color: white;
+  background-color: var(--blue);
+  min-width: 20rem;
+  padding: 1rem;
+  margin-left: 2rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.border {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border-top: .1rem solid var(--green);
+  border-bottom: .1rem solid var(--green);
+  padding: 1rem 0;
+}
+
+aside li {
+  font-size: 1.3rem;
+  font-weight: 100;
+  background-color: var(--green);
+  padding: .2rem .7rem;
+  width: auto;
+  display: inline-block;
+  border-radius: 2rem;
+  text-align: center;
+  margin-bottom: .5rem;
+}
+
+aside h3 {
+  margin-bottom: .5rem;
+  font-size: 1.6rem;
+}
+
+aside address {
+  font-size: 1.2rem;
+  line-height: 1.5rem;
 }

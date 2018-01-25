@@ -9,29 +9,36 @@
     </ul>
   </div>
 </header>
-<main>
+<main class="flex container">
   <section>
     <h2>Info</h2>
     <p><?php echo $events['content'];?></p>
   </section>
   <aside>
-    <h3>Tags</h3>
-    <ul>
-      <?php foreach($events['tags'] as $tag): ?>
-        <li><?php echo $tag['tag'];?></li>
-      <?php endforeach;?>
+      <h3>Tags</h3>
+      <ul>
+        <?php foreach($events['tags'] as $tag): ?>
+          <li><?php echo $tag['tag'];?></li>
+        <?php endforeach;?>
       </ul>
-    </ul>
-    <address>
-      <?php echo $events['address'];?> <br>
-      <?php echo $events['postal'];?> <?php echo $events['city'];?>
-    </address>
-    <ul>
-      <?php foreach($events['organisers'] as $organiser): ?>
-        <li><?php echo $organiser['name'];?></li>
-      <?php endforeach;?>
-    </ul>
+
+    <div class="border">
+      <h3>Adres</h3>
+      <address>
+        <?php echo $events['address'];?> <br>
+        <?php echo $events['postal'];?> <?php echo $events['city'];?>
+      </address>
+    </div>
+
+      <h3>Organisers</h3>
+      <ul>
+        <?php foreach($events['organisers'] as $organiser): ?>
+          <li><?php echo $organiser['name'];?></li>
+        <?php endforeach;?>
+      </ul>
+    </div>
   </aside>
+</main>
 
   <section class="gray">
     <div class="class="container"">
@@ -58,4 +65,3 @@
       </article>
     <?php endforeach;?>
   </section>
-</main>
