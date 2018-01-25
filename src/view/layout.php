@@ -33,7 +33,8 @@
           </nav>
           <form class="" action="index.php?page=programma" method="get">
             <input type="text" name="query" placeholder="Zoek een actie" id="search" class="search_field">
-            <input type="submit" name="page" value="programma" class="search">
+            <input type="hidden" name="page" value="programma" >
+            <input type="submit" class="search" value=" ">
           </form>
         </div>
       </header>
@@ -49,6 +50,7 @@
             <h3>Nieuwsbrief</h3>
             <p>Blijf op de hoogte van de laatste details en nieuwtjes</p>
             <input type="text" name="" value="" placeholder="abbonneer nu" class="search_field">
+            <input type="hidden" name="page" value="programma">
             <input type="submit" name="Verzenden" value="Verzenden" class="send">
           </div>
           <div class="social">
