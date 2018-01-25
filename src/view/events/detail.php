@@ -1,6 +1,6 @@
 <header style="background:url(assets/events/<?php echo $events['code'];?>/banner.jpg)" class="header_detail">
   <div class="container">
-    <h1><?php echo($events['title']);?></h1>
+    <h1 class="detail_banner"><?php echo($events['title']);?></h1>
   </div>
   <div>
     <ul>
