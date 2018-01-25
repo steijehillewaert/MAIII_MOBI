@@ -16,8 +16,8 @@ body {
 }
 
 p {
-  font-size: 1.4rem;
-  line-height: 1.4rem;
+  font-size: 1.7rem;
+  line-height: 2rem;
 }
 
 .container {
@@ -83,7 +83,10 @@ h1 {
 }
 
 h2 {
-  font-family: Texgyreschola, times, serif;
+  margin-bottom: 1.3rem;
+  font-size: 2.7rem;
+  font-weight: 300;
+  font-family: AvenirNext, sans-serif;
 }
 
 .programma {
@@ -131,6 +134,7 @@ h2 {
   display: flex;
   flex-direction: column;
   padding: 2rem;
+  justify-content: space-between;
 }
 
 .date_event {
@@ -225,7 +229,7 @@ h3 {
   text-overflow: ellipsis;
   overflow: hidden;
   display: -webkit-box;
-  -webkit-line-clamp: 3;
+  -webkit-line-clamp: 2;
   -webkit-box-orient: vertical; /* stylelint-disable-line */
 }
 
@@ -252,6 +256,8 @@ aside {
   min-width: 20rem;
   padding: 1rem;
   margin-left: 2rem;
+  align-self: flex-start;
+  margin-top: 4rem;
 }
 
 .flex {
@@ -284,6 +290,51 @@ aside h3 {
 }
 
 aside address {
-  font-size: 1.2rem;
-  line-height: 1.5rem;
+  font-size: 1.5rem;
+  line-height: 1.8rem;
+}
+
+.gray {
+  padding: 3rem 0;
+  background-color: #f1f0ef;
+}
+
+.images_pratical {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+
+  & img {
+    width: 50%;
+    height: 50%;
+  }
+}
+
+.pratical {
+  display: flex;
+  justify-content: space-between;
+}
+
+.pratical_text {
+  width: 45%;
+
+  & h2 {
+    font-family: AvenirNext, helvetica, sans-serif;
+    font-weight: 300;
+  }
+}
+
+.detail_title {
+  margin-top: 4rem;
+}
+
+.header_detail {
+  height: 25rem;
+  padding: 7rem;
+  background-size: cover !important; /*stylelint-disable-line*/
+}
+
+.detail p {
+  margin-right: 7rem;
+  margin-bottom: 4rem;
 }
