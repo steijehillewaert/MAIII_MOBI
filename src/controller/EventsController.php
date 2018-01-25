@@ -110,6 +110,10 @@ class EventsController extends Controller {
   public function detail() {
     $events = $this->eventDAO->selectById($_GET['id']);
     $this->set('events', $events);
+
+    $eventDAO = new EventDAO();
+    $eventHighlights = $eventDAO->selectThree();
+    $this->set('eventHighlights', $eventHighlights);
   }
 
 }
