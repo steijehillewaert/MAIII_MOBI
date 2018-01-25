@@ -2,7 +2,7 @@
   <h1><?php echo($events['title']);?></h1>
   <div>
     <ul>
-      <li><?php echo($events['location']);?></li>
+      <li><?php echo($events['city']);?></li>
       <li><?php echo date('d/m/Y', strtotime($events['start']));?></li>
       <li><?php echo date('G:i', strtotime($events['start']));?> - <?php echo date('G:i', strtotime($events['end']));?></li>
       <li><a href="<?php echo $events['link'];?>" target="_blank">Link</a></li>
