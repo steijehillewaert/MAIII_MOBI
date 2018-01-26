@@ -17,7 +17,7 @@ const init = () => {
 
 const handleInputSearch = () => {
   const q = $searchInput.value.trim();
-  // console.log(q);
+  console.log(q);
   fetch(`index.php?query=${q}&page=programma`, {
     headers: new Headers({
       Accept: `application/json`
@@ -75,7 +75,7 @@ const handleDateSearch = () => {
 };
 
 const createEvent = event => {
-  // console.log(event);
+  console.log(event);
   return `
   <article class="event">
     <img src="assets/events/${event.code}/thumb.jpg" alt="">
