@@ -1,15 +1,19 @@
 const $searchInput = document.querySelector(`.search_field`);
 const $events = document.querySelector(`.ajaxSearch`);
 const $postalInput = document.querySelector(`[name="postal"]`);
+const $dateInput = document.querySelector(`[name="date"]`);
 
 const init = () => {
+  // console.log(document.querySelector(`.search`));
+  document.querySelector(`.submit`).classList.add(`hide`);
   $searchInput.addEventListener(`input`, handleInputSearch);
   $postalInput.addEventListener(`input`, handlePostalSearch);
+  $dateInput.addEventListener(`input`, handleDateSearch);
 };
 
 const handleInputSearch = () => {
   const q = $searchInput.value.trim();
-  console.log(q);
+  // console.log(q);
   fetch(`index.php?query=${q}&page=programma`, {
     headers: new Headers({
       Accept: `application/json`
@@ -27,7 +31,7 @@ const parse = results => {
 
 const handlePostalSearch = () => {
   const postal = $postalInput.value.trim();
-  console.log(postal);
+  // console.log(postal);
   fetch(`index.php?postal=${postal}&page=programma`, {
     headers: new Headers({
       Accept: `application/json`
@@ -43,8 +47,26 @@ const parsePostal = results => {
     .join(``);
 };
 
+const handleDateSearch = () => {
+  const date = $dateInput.value;
+  console.log(date);
+  fetch(`index.php?date=${date}&page=programma`, {
+    headers: new Headers({
+      Accept: `application/json`
+    })
+  })
+    .then(r => r.json())
+    .then(data => parseDate(data));
+};
+
+const parseDate = results => {
+  $events.innerHTML = results
+    .map(event => createEvent(event))
+    .join(``);
+};
+
 const createEvent = event => {
-  console.log(event);
+  // console.log(event);
   return `
   <article class="event">
     <img src="assets/events/${event.code}/thumb.jpg" alt="">
