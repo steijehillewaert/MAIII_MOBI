@@ -429,3 +429,13 @@ aside address {
   display: flex;
   justify-content: center;
 }
+
+.top_event {
+  font-size: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.hide {
+  display: none;
+}
