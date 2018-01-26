@@ -132,15 +132,13 @@ h2 {
   min-height: 30rem;
   margin-bottom: 2rem;
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
-
   position: relative;
 }
 
 .events {
   display: flex;
-  flex-wrap: wrap;
+  flex-flow: row wrap;
   justify-content: space-between;
 }
 
@@ -153,7 +151,7 @@ h2 {
 
 .event_container {
   background-color: rgba(40, 178, 155, .9);
-  height: 17rem;
+  height: 21rem;
   display: flex;
   flex-direction: column;
   padding: 2rem;
