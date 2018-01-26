@@ -48,7 +48,7 @@
         <div class="container footer">
           <div class="nieuwsbrief">
             <h3>Nieuwsbrief</h3>
-            <p>Blijf op de hoogte van de laatste details en nieuwtjes</p>
+            <h3 class="small">Blijf op de hoogte van de laatste details en nieuwtjes</h3>
             <input type="text" name="" value="" placeholder="abbonneer nu" class="search_field">
             <input type="hidden" name="page" value="programma">
             <input type="submit" name="Verzenden" value="Verzenden" class="send">

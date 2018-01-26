@@ -1,7 +1,9 @@
 <section class="hero">
-  <h1>Week van de <br>
-  mobiliteit</h1>
-  <h1>16 tot 22 september 2018</h1>
+  <div class="container">
+    <h1>Week van de<br>
+    mobiliteit</h1>
+    <h1 class="smalltext">16 tot 22 september 2018</h1>
+  </div>
 </section>
 
 <main>

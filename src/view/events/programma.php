@@ -24,7 +24,7 @@
   </form>
   </div>
 </section>
-<section class="events container">
+<section class="events container ajaxSearch">
 <?php foreach($events as $event): ?>
   <article class="event">
     <img src="assets/events/<?php echo $event['code'];?>/thumb.jpg" alt="">
