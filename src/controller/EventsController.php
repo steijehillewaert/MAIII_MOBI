@@ -124,6 +124,9 @@ class EventsController extends Controller {
     }
 
     $events = $this->eventDAO->search($conditions);
+    foreach($events as &$event) {
+      $event['startFormatted'] = date('d/m', strtotime($event['start']));
+    }
     $this->set('events', $events);
 
     if (strtolower($_SERVER['HTTP_ACCEPT']) == 'application/json') {
