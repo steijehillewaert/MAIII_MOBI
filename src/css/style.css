@@ -439,3 +439,30 @@ aside address {
 .hide {
   display: none;
 }
+
+.button {
+  padding: 2rem;
+  text-decoration: none;
+  margin-top: 1rem;
+  width: auto;
+  color: white;
+  font-weight: 600;
+  font-size: 1.8rem;
+  display: inline-block;
+  box-shadow: .3rem .3rem 0 var(--green);
+  transition: .2s;
+
+  &.pinkgreen {
+    background-color: var(--pink);
+
+    &:hover {
+      box-shadow: .3rem .3rem 0 var(--pink);
+    }
+  }
+
+  &.bluegreen {
+    background-color: var(--blue);
+    text-align: center;
+    align-self: center;
+  }
+}
