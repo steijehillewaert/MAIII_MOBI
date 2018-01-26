@@ -27,13 +27,13 @@
 <section class="events container">
 <?php foreach($events as $event): ?>
   <article class="event">
+    <img src="assets/events/<?php echo $event['code'];?>/thumb.jpg" alt="">
     <h2 class="date_event"><?php echo date('d/m', strtotime($event['start']));?></h2>
     <div class="event_container">
       <h2 class="event_title"><?php echo $event['title']; ?></h2>
       <p class="shortinfo"><?php echo $event['content'] ?></p>
       <a href="index.php?page=detail&amp;id=<?php echo $event['id']; ?>" class="event_link">Meer info</a>
     </div>
-    <img src="assets/events/<?php echo $event['code'];?>/thumb.jpg" alt="">
   </article>
 <?php endforeach;?>
 </section>
