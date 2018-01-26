@@ -4,11 +4,15 @@ const $postalInput = document.querySelector(`[name="postal"]`);
 const $dateInput = document.querySelector(`[name="date"]`);
 
 const init = () => {
-  // console.log(document.querySelector(`.search`));
-  document.querySelector(`.submit`).classList.add(`hide`);
-  $searchInput.addEventListener(`input`, handleInputSearch);
-  $postalInput.addEventListener(`input`, handlePostalSearch);
-  $dateInput.addEventListener(`input`, handleDateSearch);
+  if($searchInput){
+    $searchInput.addEventListener(`input`, handleInputSearch);
+  }
+  if($postalInput){
+    $postalInput.addEventListener(`input`, handlePostalSearch);
+  }
+  if($dateInput){
+    $dateInput.addEventListener(`input`, handleDateSearch);
+  }
 };
 
 const handleInputSearch = () => {
@@ -21,12 +25,14 @@ const handleInputSearch = () => {
   })
     .then(r => r.json())
     .then(data => parse(data));
-};
 
-const parse = results => {
-  $events.innerHTML = results
-    .map(event => createEvent(event))
-    .join(``);
+
+  const parse = results => {
+    $events.innerHTML = results
+      .map(event => createEvent(event))
+      .join(``);
+  };
+
 };
 
 const handlePostalSearch = () => {
@@ -39,17 +45,18 @@ const handlePostalSearch = () => {
   })
     .then(r => r.json())
     .then(data => parsePostal(data));
-};
 
-const parsePostal = results => {
-  $events.innerHTML = results
-    .map(event => createEvent(event))
-    .join(``);
+
+  const parsePostal = results => {
+    $events.innerHTML = results
+      .map(event => createEvent(event))
+      .join(``);
+  };
+
 };
 
 const handleDateSearch = () => {
   const date = $dateInput.value;
-  console.log(date);
   fetch(`index.php?date=${date}&page=programma`, {
     headers: new Headers({
       Accept: `application/json`
@@ -57,12 +64,14 @@ const handleDateSearch = () => {
   })
     .then(r => r.json())
     .then(data => parseDate(data));
-};
 
-const parseDate = results => {
-  $events.innerHTML = results
-    .map(event => createEvent(event))
-    .join(``);
+
+  const parseDate = results => {
+    $events.innerHTML = results
+      .map(event => createEvent(event))
+      .join(``);
+  };
+
 };
 
 const createEvent = event => {
