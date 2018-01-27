@@ -22,7 +22,7 @@
               <p><?php echo date('H:i', strtotime($eventHighlight['start'])); ?> - <?php echo date('H:i', strtotime($eventHighlight['end'])); ?></p>
             </div>
             <h2 class="event_title"><?php echo $eventHighlight['title']; ?></h2>
-            <p class="shortinfo"><?php echo $eventHighlight['content'] ?></p>
+            <p class="shortinfo"><?php echo $eventHighlight['shortinfo'] ?></p>
             <a href="index.php?page=detail&amp;id=<?php echo $eventHighlight['id']; ?>" class="event_link">Meer info</a>
           </div>
         </article>
