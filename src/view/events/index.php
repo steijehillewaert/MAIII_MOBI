@@ -13,9 +13,14 @@
     <h2>Uitgelichte activeiteiten</h2>
     <div class="events">
       <?php foreach($eventHighlights as $eventHighlight): ?>
-        <article class="event" style="background:url(assets/events/<?php echo $eventHighlight['code'];?>/thumb.jpg)">
-          <h2 class="date_event"><?php echo date('d/m', strtotime($eventHighlight['start']));?></h2>
+        <article class="event">
+          <img src="assets/events/<?php echo $eventHighlight['code'];?>/thumb.jpg" alt="" class="imagefit">
+          <h2 class="date_event"><?php echo date('d/m', strtotime($eventHighlight['start'])); ?></h2>
           <div class="event_container">
+            <div class="top_event">
+              <p><?php echo $eventHighlight['city'] ?></p>
+              <p><?php echo date('H:i', strtotime($eventHighlight['start'])); ?> - <?php echo date('H:i', strtotime($eventHighlight['end'])); ?></p>
+            </div>
             <h2 class="event_title"><?php echo $eventHighlight['title']; ?></h2>
             <p class="shortinfo"><?php echo $eventHighlight['content'] ?></p>
             <a href="index.php?page=detail&amp;id=<?php echo $eventHighlight['id']; ?>" class="event_link">Meer info</a>

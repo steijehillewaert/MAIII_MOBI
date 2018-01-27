@@ -5,10 +5,10 @@
 </header>
 <div class="detail_info">
   <ul class="container detail_info-items">
-    <li><?php echo($events['city']);?></li>
-    <li><?php echo date('d/m/Y', strtotime($events['start']));?></li>
-    <li><?php echo date('G:i', strtotime($events['start']));?> - <?php echo date('G:i', strtotime($events['end']));?></li>
-    <li><a href="<?php echo $events['link'];?>" target="_blank">Link</a></li>
+    <li class="location"><?php echo($events['city']);?></li>
+    <li class="date"><?php echo date('d/m/Y', strtotime($events['start']));?> - <?php echo date('d/m/Y', strtotime($events['end']));?></li>
+    <li class="time"><?php echo date('G:i', strtotime($events['start']));?> - <?php echo date('G:i', strtotime($events['end']));?></li>
+    <li class="link"><a href="<?php echo $events['link'];?>" target="_blank">Link</a></li>
   </ul>
 </div>
 <main class="flex container detail">
@@ -41,17 +41,17 @@
     </div>
   </aside>
 </main>
-
   <section class="gray">
     <div class="container pratical">
       <div class="images_pratical">
         <img src="assets/events/<?php echo $events['code'];?>/big1.jpg" alt="">
-        <img src="assets/events/<?php echo $events['code'];?>/big2.jpg" alt="">
       </div>
-      <article class="pratical_text">
-        <h2>Praktisch</h2>
-        <p><?php echo $events['practical']; ?></p>
-      </article>
+      <?php if($events['practical']): ?>
+        <article class="pratical_text">
+          <h2>Praktisch</h2>
+          <p><?php echo $events['practical']; ?></p>
+        </article>
+      <?php endif ?>
     </div>
   </section>
   <div class="container">
@@ -59,13 +59,18 @@
   </div>
   <section class="events container">
     <?php foreach($eventHighlights as $eventHighlight): ?>
-      <article class="event" style="background:url(assets/events/<?php echo $eventHighlight['code'];?>/thumb.jpg)">
-        <h2 class="date_event"><?php echo date('d/m', strtotime($eventHighlight['start']));?></h2>
-        <div class="event_container">
-          <h2 class="event_title"><?php echo $eventHighlight['title']; ?></h2>
-          <p class="shortinfo"><?php echo $eventHighlight['content'] ?></p>
-          <a href="index.php?page=detail&amp;id=<?php echo $eventHighlight['id']; ?>" class="event_link">Meer info</a>
-        </div>
-      </article>
+        <article class="event">
+          <img src="assets/events/<?php echo $eventHighlight['code'];?>/thumb.jpg" alt="" class="imagefit">
+          <h2 class="date_event"><?php echo date('d/m', strtotime($eventHighlight['start'])); ?></h2>
+          <div class="event_container">
+            <div class="top_event">
+              <p><?php echo $eventHighlight['city'] ?></p>
+              <p><?php echo date('H:i', strtotime($eventHighlight['start'])); ?> - <?php echo date('H:i', strtotime($eventHighlight['end'])); ?></p>
+            </div>
+            <h2 class="event_title"><?php echo $eventHighlight['title']; ?></h2>
+            <p class="shortinfo"><?php echo $eventHighlight['content'] ?></p>
+            <a href="index.php?page=detail&amp;id=<?php echo $eventHighlight['id']; ?>" class="event_link">Meer info</a>
+          </div>
+        </article>
     <?php endforeach;?>
   </section>
