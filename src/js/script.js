@@ -76,21 +76,39 @@ const handleDateSearch = () => {
 
 const createEvent = event => {
   console.log(event);
-  return `
-  <article class="event">
-    <img src="assets/events/${event.code}/thumb.jpg" alt="" class="imagefit">
-    <h2 class="date_event">${event.startFormatted}</h2>
-    <div class="event_container">
-      <div class="top_event">
-        <p>${event.city}</p>
-        <p>${event.startTimeFormatted} - ${event.endTimeFormatted}</p>
+  if(event.startFormatted === event.endFormatted){
+    return `
+    <article class="event">
+      <img src="assets/events/${event.code}/thumb.jpg" alt="" class="imagefit">
+      <h2 class="date_event">${event.startFormatted}</h2>
+      <div class="event_container">
+        <div class="top_event">
+          <p>${event.city}</p>
+          <p>${event.startTimeFormatted} - ${event.endTimeFormatted}</p>
+        </div>
+        <h2 class="event_title">${event.title}</h2>
+        <p class="shortinfo">${event.shortinfo}</p>
+        <a href="index.php?page=detail&amp;id=${event.id}" class="event_link">Meer info</a>
       </div>
-      <h2 class="event_title">${event.title}</h2>
-      <p class="shortinfo">${event.shortinfo}</p>
-      <a href="index.php?page=detail&amp;id=${event.id}" class="event_link">Meer info</a>
-    </div>
-  </article>
-  `;
+    </article>
+    `;
+  }else{
+    return `
+    <article class="event">
+      <img src="assets/events/${event.code}/thumb.jpg" alt="" class="imagefit">
+      <h2 class="date_event">${event.startFormatted} - ${event.endFormatted}</h2>
+      <div class="event_container">
+        <div class="top_event">
+          <p>${event.city}</p>
+          <p>${event.startTimeFormatted} - ${event.endTimeFormatted}</p>
+        </div>
+        <h2 class="event_title">${event.title}</h2>
+        <p class="shortinfo">${event.shortinfo}</p>
+        <a href="index.php?page=detail&amp;id=${event.id}" class="event_link">Meer info</a>
+      </div>
+    </article>
+    `;
+  }
 };
 
 init();

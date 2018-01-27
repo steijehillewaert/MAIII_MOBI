@@ -27,7 +27,11 @@
 <?php foreach($events as $event): ?>
   <article class="event">
     <img src="assets/events/<?php echo $event['code'];?>/thumb.jpg" alt="" class="imagefit">
-    <h2 class="date_event"><?php echo $event['startFormatted'] ?></h2>
+    <?php if($event['startFormatted'] === $event['endFormatted']) : ?>
+      <h2 class="date_event"><?php echo $event['startFormatted'] ?></h2>
+    <?php else : ?>
+      <h2 class="date_event"><?php echo $event['startFormatted'] ?> - <?php echo $event['endFormatted'] ?></h2>
+    <?php endif ?>
     <div class="event_container">
       <div class="top_event">
         <p><?php echo $event['city'] ?></p>

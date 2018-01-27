@@ -126,6 +126,7 @@ class EventsController extends Controller {
     $events = $this->eventDAO->search($conditions);
     foreach($events as &$event) {
       $event['startFormatted'] = date('d/m', strtotime($event['start']));
+      $event['endFormatted'] = date('d/m', strtotime($event['end']));
       $event['startTimeFormatted'] = date('H:i', strtotime($event['start']));
       $event['endTimeFormatted'] = date('H:i', strtotime($event['end']));
     }
