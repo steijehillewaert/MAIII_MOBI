@@ -620,6 +620,10 @@ aside {
     text-align: center;
     align-self: center;
   }
+
+  &:hover {
+    box-shadow: none;
+  }
 }
 
 .location {
