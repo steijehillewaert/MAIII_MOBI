@@ -33,7 +33,7 @@
             </ul>
           </nav>
           <form class="" action="index.php?page=programma" method="get">
-            <input type="text" name="query" placeholder="Zoek een actie" id="search" class="search_field">
+            <input type="text" name="query" placeholder="Zoek een actie" id="search" class="search_field" value="">
             <input type="hidden" name="page" value="programma" >
             <input type="submit" class="search" value=" ">
           </form>

@@ -15,13 +15,12 @@
         <option value="2018-09-22">24/09/2018</option>
       </select>
       <input type="hidden" name="page" value="programma">
-      <!-- <input type="submit" class="search" value=" ">
-    </form> -->
     <form action="?page=programma" method="get">
       <input type="text" name="postal" placeholder="Postcode ..." id="search">
       <input type="hidden" name="page" value="programma">
       <input type="submit" class="search" value=" ">
-  </form>
+    </form>
+    <a href="?page=programma" alt="reset filter" class="reset">Reset Filter</a>
   </div>
 </section>
 <section class="events container ajaxSearch">

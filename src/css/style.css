@@ -684,6 +684,17 @@ aside {
 
 }
 
+.reset {
+  color: white;
+  text-decoration: none;
+  margin-top: 1rem;
+  display: inline-block;
+  font-size: 1.5rem;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
 
 @media only screen and (max-width: 960px) {
 
