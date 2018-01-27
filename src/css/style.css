@@ -97,18 +97,62 @@ nav ul li {
   margin-right: 2rem;
 }
 
-.blue {
-  background-color: var(--blue);
-}
-
-.green {
-  background-color: var(--green);
-}
-
 .news {
   margin-top: 6rem;
-  display: grid;
+  display: flex;
   margin-bottom: 6rem;
+  align-items: center;
+  color: white;
+
+  & h3 {
+    color: white;
+    font-size: 2.5rem;
+    font-weight: 400;
+  }
+
+  & .blue {
+    background-color: var(--blue);
+    width: 100%;
+    padding: 3rem;
+    height: 20rem;
+    display: flex;
+    align-items: center;
+
+    & h3 {
+      font-size: 3rem;
+      line-height: 3.5rem;
+    }
+  }
+
+  & .green {
+    background-color: var(--green);
+    width: 100%;
+    padding: 3rem;
+    height: 20rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    & form {
+      display: flex;
+      margin-top: 1rem;
+
+      & input[type='submit'] {
+        background-color: var(--blue);
+        color: white;
+        font-weight: 600;
+        margin: 0;
+        font-size: 1.4rem;
+        padding: 0 3rem;
+      }
+
+      & input[type='text'] {
+        flex-grow: 1;
+        margin: 0;
+        border: .1rem solid var(--blue);
+      }
+    }
+  }
 }
 
 h1 {
@@ -313,6 +357,10 @@ aside {
   margin-left: 2rem;
   align-self: flex-start;
   margin-top: 4rem;
+
+  & h3 {
+    margin: 0;
+  }
 }
 
 .flex {
@@ -383,6 +431,43 @@ aside address {
     font-family: AvenirNext, helvetica, sans-serif;
     font-weight: 300;
   }
+
+  & h3 {
+    font-weight: 300;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+  }
+
+  & h4 {
+    font-weight: 300;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    margin-bottom: .5rem;
+  }
+
+  & li {
+    font-size: 1.7rem;
+    list-style-type: circle;
+    margin-left: 3rem;
+    margin-bottom: .5rem;
+  }
+
+  & ul {
+    margin-bottom: 2rem;
+  }
+
+  & p {
+    margin-bottom: 1rem;
+  }
+
+  & a {
+    text-decoration: none;
+    color: black;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
 
 .detail_title {
@@ -432,10 +517,6 @@ aside address {
   align-self: flex-end;
 }
 
-.detail p {
-  margin-right: 7rem;
-}
-
 .detail_banner {
   text-shadow: .1rem .1rem .3rem rgba(0, 0, 0, .5);
 }
@@ -443,12 +524,31 @@ aside address {
 .detail {
   margin-top: -6rem;
   margin-bottom: 4rem;
+
+  & h3 {
+    font-weight: 300;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+  }
+
+  & h4 {
+    font-weight: 400;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    margin-bottom: .5rem;
+  }
+
+  & p {
+    margin-right: 7rem;
+    margin-bottom: .5rem;
+  }
 }
 
 .watisdeweek {
   display: flex;
   justify-content: space-between;
-  margin-top: 6rem;
+  margin-top: 10rem;
+  margin-bottom: 10rem;
 
   & img {
     margin-right: 5rem;
@@ -575,6 +675,14 @@ aside address {
   .watisdeweek {
     margin-top: 6rem;
     margin-bottom: 6rem;
+
+    & img {
+      width: 50%;
+    }
+  }
+
+  .flextext {
+    width: 100%;
   }
 
   .hero .container {
@@ -595,6 +703,11 @@ aside address {
     margin-top: -6rem;
     margin-bottom: 5rem;
   }
+
+  .news {
+    margin-bottom: 6rem;
+  }
+
 }
 
 @media only screen and (max-width: 750px) {
@@ -619,6 +732,8 @@ aside address {
     flex-direction: column;
 
     & img {
+      height: 100%;
+      object-fit: cover;
       width: 100%;
       margin-bottom: 2rem;
       margin-right: 0;
@@ -630,8 +745,12 @@ aside address {
   }
 
   .news {
-    margin-bottom: 5rem;
+    flex-direction: column;
     text-align: center;
+
+    & .blue {
+      justify-content: center;
+    }
   }
 
   .header {
@@ -765,4 +884,11 @@ aside address {
     margin-top: 4.5rem;
   }
 
+}
+
+@media only screen and (max-width: 320px) {
+
+  .news form {
+    flex-direction: column;
+  }
 }

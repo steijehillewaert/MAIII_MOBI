@@ -42,15 +42,17 @@
     </div>
   </section>
   <section class="news container">
-    <div class="blue">
-      <h3>Dien je actie in voor <br>
-        de week van de mobiliteit 2018</h3>
-    </div>
+      <div class="blue">
+        <h3>Dien je actie in voor <br>
+          de week van de mobiliteit 2018</h3>
+      </div>
     <div class="green">
       <h3>Nieuwsbrief</h3>
       <p>Blijf op de hoogte van de laatste details en nieuwtjes</p>
-      <input type="text" name="" value="">
-      <input type="submit" name="Verzenden" value="nieuwsbrief">
+      <form action="#" >
+        <input type="text" name="" value="" placeholder="uw emailadres ...">
+        <input type="submit" value="Verzenden">
+      </form>
     </div>
   </section>
   <section class="container partners">

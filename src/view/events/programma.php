@@ -35,7 +35,7 @@
         <p><?php echo $event['startTimeFormatted'] ?> - <?php echo $event['endTimeFormatted'] ?></p>
       </div>
       <h2 class="event_title"><?php echo $event['title']; ?></h2>
-      <p class="shortinfo"><?php echo $event['content'] ?></p>
+      <p class="shortinfo"><?php echo $event['shortinfo'] ?></p>
       <a href="index.php?page=detail&amp;id=<?php echo $event['id']; ?>" class="event_link">Meer info</a>
     </div>
   </article>

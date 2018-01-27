@@ -14,7 +14,7 @@
 <main class="flex container detail">
   <section>
     <h2 class="detail_title">Info</h2>
-    <p><?php echo $events['content'];?></p>
+    <?php echo $events['content'];?>
   </section>
   <aside>
       <h3>Tags</h3>
@@ -49,7 +49,7 @@
       <?php if($events['practical']): ?>
         <article class="pratical_text">
           <h2>Praktisch</h2>
-          <p><?php echo $events['practical']; ?></p>
+          <?php echo $events['practical']; ?>
         </article>
       <?php endif ?>
     </div>
@@ -68,7 +68,7 @@
               <p><?php echo date('H:i', strtotime($eventHighlight['start'])); ?> - <?php echo date('H:i', strtotime($eventHighlight['end'])); ?></p>
             </div>
             <h2 class="event_title"><?php echo $eventHighlight['title']; ?></h2>
-            <p class="shortinfo"><?php echo $eventHighlight['content'] ?></p>
+            <p class="shortinfo"><?php echo $eventHighlight['shortinfo'] ?></p>
             <a href="index.php?page=detail&amp;id=<?php echo $eventHighlight['id']; ?>" class="event_link">Meer info</a>
           </div>
         </article>
