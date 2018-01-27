@@ -6,7 +6,7 @@ Op de site worden diverse zaken voor diverse doelgroepen gecentraliseerd. Enerzi
 
 ## Install Instructions
 
-Install project dependencies 'npm install' or 'yarn'
+Install project dependencies `npm install` or `yarn`
 
 ### Frontend development
 
