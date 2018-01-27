@@ -359,7 +359,28 @@ aside {
   margin-top: 4rem;
 
   & h3 {
-    margin: 0;
+    margin-top: 0 !important; /*stylelint-disable-line*/
+    margin-bottom: .5rem;
+    font-size: 1.6rem;
+  }
+
+  & li {
+    font-size: 1.3rem;
+    font-weight: 100;
+    background-color: var(--green);
+    padding: .2rem .7rem;
+    width: auto;
+    display: inline-block;
+    border-radius: 2rem;
+    text-align: center;
+    margin-bottom: .5rem;
+    margin-left: 0 !important;
+    margin-top: 0 !important;
+  }
+
+  & address {
+    font-size: 1.5rem;
+    line-height: 1.8rem;
   }
 }
 
@@ -373,28 +394,6 @@ aside {
   border-top: .1rem solid var(--green);
   border-bottom: .1rem solid var(--green);
   padding: 1rem 0;
-}
-
-aside li {
-  font-size: 1.3rem;
-  font-weight: 100;
-  background-color: var(--green);
-  padding: .2rem .7rem;
-  width: auto;
-  display: inline-block;
-  border-radius: 2rem;
-  text-align: center;
-  margin-bottom: .5rem;
-}
-
-aside h3 {
-  margin-bottom: .5rem;
-  font-size: 1.6rem;
-}
-
-aside address {
-  font-size: 1.5rem;
-  line-height: 1.8rem;
 }
 
 .gray {
@@ -450,6 +449,10 @@ aside address {
     list-style-type: circle;
     margin-left: 3rem;
     margin-bottom: .5rem;
+  }
+
+  & address {
+    font-size: 1.7rem;
   }
 
   & ul {
@@ -541,6 +544,18 @@ aside address {
   & p {
     margin-right: 7rem;
     margin-bottom: .5rem;
+  }
+
+  & li {
+    font-size: 1.7rem;
+    list-style-type: circle;
+    margin-left: 3rem;
+    margin-bottom: .5rem;
+  }
+
+  & ul {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
   }
 }
 
@@ -724,7 +739,7 @@ aside address {
   }
 
   .title {
-    margin: 0;
+    margin: 0 auto;
     height: 76%;
   }
 

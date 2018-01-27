@@ -6,7 +6,11 @@
 <div class="detail_info">
   <ul class="container detail_info-items">
     <li class="location"><?php echo($events['city']);?></li>
-    <li class="date"><?php echo date('d/m/Y', strtotime($events['start']));?> - <?php echo date('d/m/Y', strtotime($events['end']));?></li>
+    <?php if(date('d/m/Y', strtotime($events['start'])) == date('d/m/Y', strtotime($events['end'])) ) : ?>
+      <li class="date"><?php echo date('d/m/Y', strtotime($events['start']));?></li>
+    <?php else : ?>
+      <li class="date"><?php echo date('d/m/Y', strtotime($events['start']));?> - <?php echo date('d/m/Y', strtotime($events['end']));?></li>
+    <?php endif ?>
     <li class="time"><?php echo date('G:i', strtotime($events['start']));?> - <?php echo date('G:i', strtotime($events['end']));?></li>
     <li class="link"><a href="<?php echo $events['link'];?>" target="_blank">Link</a></li>
   </ul>
@@ -25,9 +29,13 @@
       </ul>
 
     <div class="border">
-      <h3>Adres</h3>
+      <h3>Locatie</h3>
       <address>
-        <?php echo $events['address'];?> <br>
+        <?php if($events['location'] === $events['address']) : ?>
+          <?php echo $events['address'];?> <br>
+        <?php else : ?>
+          <?php echo $events['location'];?> <br>
+        <?php endif ?>
         <?php echo $events['postal'];?> <?php echo $events['city'];?>
       </address>
     </div>
