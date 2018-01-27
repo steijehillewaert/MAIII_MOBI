@@ -32,7 +32,7 @@
     <div class="event_container">
       <div class="top_event">
         <p><?php echo $event['city'] ?></p>
-        <p><?php echo date('d/m', strtotime($event['start']));?></p>
+        <p><?php echo $event['startTimeFormatted'] ?> - <?php echo $event['endTimeFormatted'] ?></p>
       </div>
       <h2 class="event_title"><?php echo $event['title']; ?></h2>
       <p class="shortinfo"><?php echo $event['content'] ?></p>
