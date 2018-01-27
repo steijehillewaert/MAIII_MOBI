@@ -12,3 +12,8 @@ Install project dependencies `npm install` or `yarn`
 
 Run the project with development server on port 8080:
 `npm run development` or `yarn development`
+
+
+### Local Development Testing
+
+Change the ip address in `src/controller/Controller.php` and in `package.json` to your own ip address.
