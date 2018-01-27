@@ -6,8 +6,9 @@ Op de site worden diverse zaken voor diverse doelgroepen gecentraliseerd. Enerzi
 
 ## Install Instructions
 
-Install project dependencies npm install or yarn
+Install project dependencies 'npm install' or 'yarn'
 
 ### Frontend development
 
-Run the project with development server on port 8080: npm run development or yarn development
+Run the project with development server on port 8080:
+`npm run development` or `yarn development`
