@@ -86,7 +86,7 @@ const createEvent = event => {
         <p>${event.startTimeFormatted} - ${event.endTimeFormatted}</p>
       </div>
       <h2 class="event_title">${event.title}</h2>
-      <p class="shortinfo">${event.content}</p>
+      <p class="shortinfo">${event.shortinfo}</p>
       <a href="index.php?page=detail&amp;id=${event.id}" class="event_link">Meer info</a>
     </div>
   </article>
