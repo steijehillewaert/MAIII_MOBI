@@ -3,6 +3,7 @@
     <h1>Week van de<br>
     mobiliteit</h1>
     <h1 class="smalltext">16 tot 22 september 2018</h1>
+    <a href="index.php?page=programma" class="fullprogram button pinkgreen">Programma Overzicht</a>
   </div>
 </section>
 
@@ -22,7 +23,9 @@
         </article>
       <?php endforeach;?>
     </div>
-  <a href="index.php?page=programma" class="fullprogram button bluegreen">Volledige programma</a>
+    <div class="center">
+      <a href="index.php?page=programma" class="fullprogram button bluegreen">Volledige programma</a>
+    </div>
   </section>
 
   <section class="container watisdeweek">
