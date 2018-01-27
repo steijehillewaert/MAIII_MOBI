@@ -27,7 +27,7 @@
 <section class="events container ajaxSearch">
 <?php foreach($events as $event): ?>
   <article class="event">
-    <img src="assets/events/<?php echo $event['code'];?>/thumb.jpg" alt="">
+    <img src="assets/events/<?php echo $event['code'];?>/thumb.jpg" alt="" class="imagefit">
     <h2 class="date_event"><?php echo $event['startFormatted'] ?></h2>
     <div class="event_container">
       <div class="top_event">
