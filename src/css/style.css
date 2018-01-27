@@ -29,6 +29,10 @@ body {
   & h1 {
     color: var(--pink);
   }
+
+  & .container {
+    width: 96rem;
+  }
 }
 
 .smalltext {
@@ -133,6 +137,10 @@ h2 {
 
   & form {
     margin-top: 3rem;
+  }
+
+  & .container {
+    width: 96rem;
   }
 }
 
@@ -427,12 +435,15 @@ aside address {
   display: flex;
   justify-content: space-between;
   margin-top: 6rem;
+
+  & img {
+    margin-right: 5rem;
+  }
 }
 
 .flextext {
   display: flex;
   flex-direction: column;
-  width: 46%;
 }
 
 .partner_container {
@@ -479,18 +490,88 @@ aside address {
   }
 }
 
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 960px) {
 
-  body {
-    background-color: red;
+  .container {
+    margin: 0 5%;
+  }
+
+  .watisdeweek {
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+  }
+
+  .hero .container {
+    width: inherit;
+  }
+
+  .programma {
+
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+
+    & .container {
+      margin: 0;
+    }
   }
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 750px) {
 
-  body {
-    background-color: green;
+  .watisdeweek {
+    flex-direction: column;
+
+    & img {
+      width: 100%;
+      margin-bottom: 2rem;
+      margin-right: 0;
+    }
   }
+
+  .flextext {
+    width: 100%;
+  }
+
+  .news {
+    margin-bottom: 5rem;
+  }
+
+  .header {
+    flex-direction: column;
+
+    & input {
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 700px) {
+
+  .partner_container {
+    flex-direction: column;
+
+    & img {
+      margin-bottom: 3rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 630px) {
+
+  h1, .detail_banner {
+    font-size: 10vw;
+  }
+}
+
+@media only screen and (max-width: 560px) {
+
+  .programma {
+    background-position: center;
+  }
+
+}
+
+@media only screen and (max-width: 425px) {
 
   nav ul {
     flex-direction: column;
@@ -507,21 +588,19 @@ aside address {
   }
 
   .programma {
-    margin-top: 0;
-  }
-
-  .partner_container {
-    flex-direction: column;
-
-    & img {
-      margin-bottom: 3rem;
-    }
+    margin: 0;
+    margin-bottom: 2rem;
+    height: 23rem;
   }
 
   .footer {
     flex-direction: column;
     align-items: center;
     text-align: center;
+  }
+
+  input[name='postal'] {
+    margin-top: 2rem;
   }
 
 }
