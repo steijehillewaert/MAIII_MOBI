@@ -79,7 +79,7 @@ nav {
   color: var(--pink);
 }
 
-header {
+.nav {
   background-color: black;
 }
 
@@ -521,8 +521,19 @@ aside {
   flex-direction: column;
   height: 40rem;
   padding: 7rem;
-  background-size: cover !important; /*stylelint-disable-line*/
-  background-position: center !important; /*stylelint-disable-line*/
+  width: 100%;
+}
+
+.detail_header_all {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.all {
+  position: relative;
+  height: 45rem;
+  width: 100%;
 }
 
 .title {
@@ -877,10 +888,6 @@ aside {
 
   .detail_info {
     transform: translateY(-16rem);
-  }
-
-  .detail section {
-    margin-top: -17rem;
   }
 
   .title {

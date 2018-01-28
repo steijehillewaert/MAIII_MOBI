@@ -1,19 +1,27 @@
-<header style="background:url(assets/events/<?php echo $events['code'];?>/banner.jpg)" class="header_detail">
-  <div class="container title">
-    <h1 class="detail_banner"><?php echo($events['title']);?></h1>
+<div class="all">
+  <picture class="picturecontainer">
+    <source type="image/webp" srcset="assets/events/<?php echo $events['code'];?>/banner.webp" height="400">
+    <img src="assets/events/<?php echo $events['code'];?>/banner.jpg" alt="" height="400">
+  </picture>
+  <div class="detail_header_all">
+    <header class="header_detail">
+      <div class="container title">
+        <h1 class="detail_banner"><?php echo($events['title']);?></h1>
+      </div>
+    </header>
+    <div class="detail_info">
+      <ul class="container detail_info-items">
+        <li class="location"><?php echo($events['city']);?></li>
+        <?php if(date('d/m/Y', strtotime($events['start'])) == date('d/m/Y', strtotime($events['end'])) ) : ?>
+          <li class="date"><?php echo date('d/m/Y', strtotime($events['start']));?></li>
+        <?php else : ?>
+          <li class="date"><?php echo date('d/m/Y', strtotime($events['start']));?> - <?php echo date('d/m/Y', strtotime($events['end']));?></li>
+        <?php endif ?>
+        <li class="time"><?php echo date('G:i', strtotime($events['start']));?> - <?php echo date('G:i', strtotime($events['end']));?></li>
+        <li class="link"><a href="<?php echo $events['link'];?>" target="_blank">Link</a></li>
+      </ul>
+    </div>
   </div>
-</header>
-<div class="detail_info">
-  <ul class="container detail_info-items">
-    <li class="location"><?php echo($events['city']);?></li>
-    <?php if(date('d/m/Y', strtotime($events['start'])) == date('d/m/Y', strtotime($events['end'])) ) : ?>
-      <li class="date"><?php echo date('d/m/Y', strtotime($events['start']));?></li>
-    <?php else : ?>
-      <li class="date"><?php echo date('d/m/Y', strtotime($events['start']));?> - <?php echo date('d/m/Y', strtotime($events['end']));?></li>
-    <?php endif ?>
-    <li class="time"><?php echo date('G:i', strtotime($events['start']));?> - <?php echo date('G:i', strtotime($events['end']));?></li>
-    <li class="link"><a href="<?php echo $events['link'];?>" target="_blank">Link</a></li>
-  </ul>
 </div>
 <main class="flex container detail">
   <section>
