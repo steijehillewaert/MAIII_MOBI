@@ -28,11 +28,7 @@ class EventsController extends Controller {
 
 
     //example: search on organiser name
-    // $conditions[] = array(
-    //   'field' => 'organiser',
-    //   'comparator' => 'like',
-    //   'value' => 'brussel'
-    // );
+
 
     //example: search on tag name
 
@@ -94,11 +90,19 @@ class EventsController extends Controller {
 
 
     if (isset($_GET['postal'])) {
+      if(is_numeric($_GET['postal'])) {
       $conditions[] = array(
         'field' => 'postal',
         'comparator' => 'like',
         'value' => $_GET['postal']
       );
+    } else {
+        $conditions[] = array(
+          'field' => 'city',
+          'comparator' => 'like',
+          'value' => $_GET['postal']
+        );
+      }
     }
 
     if(isset($_GET['date'])) {

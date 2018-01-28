@@ -14,7 +14,7 @@
         <option value="2018-09-22" <?php if(!empty($_GET['date']) && $_GET['date'] == '2018-09-22') echo 'selected';?>>22/09/2018</option>
         <option value="2018-09-24" <?php if(!empty($_GET['date']) && $_GET['date'] == '2018-09-24') echo 'selected';?>>24/09/2018</option>
       </select>
-      <input type="text" name="postal" placeholder="Postcode ..." <?php if(!empty($_GET['postal'])) echo 'value="' . $_GET['postal'] . '"';?>>
+      <input type="text" name="postal" placeholder="Gemeente ..." <?php if(!empty($_GET['postal'])) echo 'value="' . $_GET['postal'] . '"';?>>
       <input type="hidden" name="page" value="programma">
       <input type="submit" class="search noJS" value=" ">
     </form>
