@@ -78,9 +78,9 @@
     <h2>Partners</h2>
     <div class="partner_container">
       <img src="assets/img/EU_Mobiliy_Week.svg" width="161" alt="logo EU Mobiliy">
-      <img src="assets/img/nmbs.svg" alt="" width="177" alt="logo nmbs">
-      <img src="assets/img/delijn.svg" alt="" width="113" alt="logo de lijn">
-      <img src="assets/img/vlaanderenmobi.svg" alt="" width="224" alt="logo vlaanderen mobiliteit">
+      <img src="assets/img/nmbs.svg" width="177" alt="logo nmbs">
+      <img src="assets/img/delijn.svg" width="113" alt="logo de lijn">
+      <img src="assets/img/vlaanderenmobi.svg" width="224" alt="logo vlaanderen mobiliteit">
     </div>
   </section>
 </main>
