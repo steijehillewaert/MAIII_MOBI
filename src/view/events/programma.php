@@ -26,7 +26,10 @@
 <section class="events container ajaxSearch">
 <?php foreach($events as $event): ?>
   <article class="event">
-    <img src="assets/events/<?php echo $event['code'];?>/thumb.jpg" alt="" class="imagefit">
+    <picture class="picturecontainer">
+      <source type="image/webp" srcset="assets/events/<?php echo $event['code'];?>/thumb.webp" height="350">
+      <img src="assets/events/<?php echo $event['code'];?>/thumb.jpg" alt="" height="350">
+    </picture>
     <?php if($event['startFormatted'] === $event['endFormatted']) : ?>
       <h2 class="date_event"><?php echo $event['startFormatted'] ?></h2>
     <?php else : ?>

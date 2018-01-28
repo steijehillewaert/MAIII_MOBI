@@ -199,7 +199,17 @@ h2 {
   flex-grow: 1;
 }
 
-.imagefit {
+.picturecontainer {
+  object-fit: cover;
+  overflow: hidden;
+  width: 100%;
+}
+
+.centerimage {
+  justify-content: space-around !important;
+}
+
+.picturecontainer source, .picturecontainer img {
   width: 100%;
   object-fit: cover;
 }

@@ -49,11 +49,18 @@
     </div>
   </aside>
 </main>
+  <?php $file = 'assets/events/'.$events['code'].'/big1.jpg' ?>
+  <?php if (file_exists($file) || $events['practical']) : ?>
   <section class="gray">
-    <div class="container pratical">
+    <div class="container pratical <?php if(!$events['practical']){ echo 'centerimage';} ?>">
+      <?php if (file_exists($file)): ?>
       <div class="images_pratical">
-        <img src="assets/events/<?php echo $events['code'];?>/big1.jpg" alt="">
+          <picture>
+            <source type="image/webp" srcset="assets/events/<?php echo $events['code'];?>/big1.webp">
+            <img src="assets/events/<?php echo $events['code'];?>/big1.jpg" alt="">
+          </picture>
       </div>
+      <?php endif ?>
       <?php if($events['practical']): ?>
         <article class="pratical_text">
           <h2>Praktisch</h2>
@@ -62,13 +69,17 @@
       <?php endif ?>
     </div>
   </section>
+  <?php endif ?>
   <div class="container">
     <h2>Aanbevolen activeiteiten</h2>
   </div>
   <section class="events container">
     <?php foreach($eventHighlights as $eventHighlight): ?>
         <article class="event">
-          <img src="assets/events/<?php echo $eventHighlight['code'];?>/thumb.jpg" alt="" class="imagefit">
+          <picture class="picturecontainer">
+            <source type="image/webp" srcset="assets/events/<?php echo $eventHighlight['code'];?>/thumb.webp" height="350">
+            <img src="assets/events/<?php echo $eventHighlight['code'];?>/thumb.jpg" alt="" height="350">
+          </picture>
           <h2 class="date_event"><?php echo date('d/m', strtotime($eventHighlight['start'])); ?></h2>
           <div class="event_container">
             <div class="top_event">

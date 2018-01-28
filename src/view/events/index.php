@@ -14,7 +14,10 @@
     <div class="events">
       <?php foreach($eventHighlights as $eventHighlight): ?>
         <article class="event">
-          <img src="assets/events/<?php echo $eventHighlight['code'];?>/thumb.jpg" alt="" class="imagefit">
+          <picture class="picturecontainer">
+            <source type="image/webp" srcset="assets/events/<?php echo $eventHighlight['code'];?>/thumb.webp" height="350">
+            <img src="assets/events/<?php echo $eventHighlight['code'];?>/thumb.jpg" alt="" height="350">
+          </picture>
           <h2 class="date_event"><?php echo date('d/m', strtotime($eventHighlight['start'])); ?></h2>
           <div class="event_container">
             <div class="top_event">
@@ -34,7 +37,10 @@
   </section>
 
   <section class="container watisdeweek">
-    <img src="assets/img/weekvanmobiliteit.png" alt="">
+    <picture>
+      <source type="image/webp" srcset="assets/img/weekvanmobiliteit.webp">
+      <img src="assets/img/weekvanmobiliteit.png" alt="">
+    </picture>
     <div class="flextext">
       <h2>Wat is de week van de mobiliteit?</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pretium neque ante, id volutpat metus pulvinar non. Fusce quis magna fringilla, volutpat est eget, congue tortor. Phasellus ac pellentesque arcu, feugiat ultrices nisl. Suspendisse potenti. </p>

@@ -79,7 +79,10 @@ const createEvent = event => {
   if(event.startFormatted === event.endFormatted){
     return `
     <article class="event">
-      <img src="assets/events/${event.code}/thumb.jpg" alt="" class="imagefit">
+      <picture class="picturecontainer">
+        <source type="image/webp" srcset="assets/events/${event.code}/thumb.webp" height="350">
+        <img src="assets/events/${event.code}/thumb.jpg" alt="" height="350">
+      </picture>
       <h2 class="date_event">${event.startFormatted}</h2>
       <div class="event_container">
         <div class="top_event">
@@ -95,7 +98,10 @@ const createEvent = event => {
   }else{
     return `
     <article class="event">
-      <img src="assets/events/${event.code}/thumb.jpg" alt="" class="imagefit">
+      <picture class="picturecontainer">
+        <source type="image/webp" srcset="assets/events/${event.code}/thumb.webp" height="350">
+        <img src="assets/events/${event.code}/thumb.jpg" alt="" height="350">
+      </picture>
       <h2 class="date_event">${event.startFormatted} - ${event.endFormatted}</h2>
       <div class="event_container">
         <div class="top_event">
