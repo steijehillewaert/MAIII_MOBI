@@ -2,16 +2,20 @@ const $searchInput = document.querySelector(`.search_field`);
 const $events = document.querySelector(`.ajaxSearch`);
 const $postalInput = document.querySelector(`[name="postal"]`);
 const $dateInput = document.querySelector(`[name="date"]`);
+const $resetButton = document.querySelector(`.reset`);
 
 const init = () => {
   if($searchInput){
     $searchInput.addEventListener(`input`, handleInputSearch);
   }
   if($postalInput){
-    $postalInput.addEventListener(`input`, handlePostalSearch);
+    $postalInput.addEventListener(`input`, handleFilterSearch);
   }
   if($dateInput){
-    $dateInput.addEventListener(`input`, handleDateSearch);
+    $dateInput.addEventListener(`input`, handleFilterSearch);
+  }
+  if($resetButton){
+    $resetButton.addEventListener(`click`, handleResetButton);
   }
 };
 
@@ -35,38 +39,39 @@ const handleInputSearch = () => {
 
 };
 
-const handlePostalSearch = () => {
-  const postal = $postalInput.value.trim();
-  // console.log(postal);
-  fetch(`index.php?postal=${postal}&page=programma`, {
+const handleResetButton = () => {
+  fetch(`index.php?page=programma`, {
     headers: new Headers({
       Accept: `application/json`
     })
   })
     .then(r => r.json())
-    .then(data => parsePostal(data));
+    .then(data => parseFilter(data));
 
 
-  const parsePostal = results => {
+  const parseFilter = results => {
     $events.innerHTML = results
       .map(event => createEvent(event))
       .join(``);
+    $postalInput.value = ``;
+    $dateInput.value = `2018-09-16`;
   };
-
 };
 
-const handleDateSearch = () => {
+const handleFilterSearch = () => {
+  const postal = $postalInput.value.trim();
   const date = $dateInput.value;
-  fetch(`index.php?date=${date}&page=programma`, {
+  // console.log(postal);
+  fetch(`index.php?date=${date}&postal=${postal}&page=programma`, {
     headers: new Headers({
       Accept: `application/json`
     })
   })
     .then(r => r.json())
-    .then(data => parseDate(data));
+    .then(data => parseFilter(data));
 
 
-  const parseDate = results => {
+  const parseFilter = results => {
     $events.innerHTML = results
       .map(event => createEvent(event))
       .join(``);

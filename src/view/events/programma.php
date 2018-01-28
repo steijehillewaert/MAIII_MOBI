@@ -3,24 +3,25 @@
     <h1>Programma</h1>
     <form class="" action="?page=programma" method="get">
       <select name='date' id='date'>
-        <option disabled selected>Kies een datum</option>
-        <option value="2018-09-09">09/09/2018</option>
-        <option value="2018-09-16">16/09/2018</option>
-        <option value="2018-09-17">17/09/2018</option>
-        <option value="2018-09-18">18/09/2018</option>
-        <option value="2018-09-19">19/09/2018</option>
-        <option value="2018-09-20">20/09/2018</option>
-        <option value="2018-09-21">21/09/2018</option>
-        <option value="2018-09-22">22/09/2018</option>
-        <option value="2018-09-22">24/09/2018</option>
+        <option disabled>Kies een datum</option>
+        <option value="2018-09-09" <?php if(!empty($_GET['date']) && $_GET['date'] == '2018-09-09') echo 'selected';?>>09/09/2018</option>
+        <option value="2018-09-16" selected <?php if(!empty($_GET['date']) && $_GET['date'] == '2018-09-16') echo 'selected';?>>16/09/2018</option>
+        <option value="2018-09-17" <?php if(!empty($_GET['date']) && $_GET['date'] == '2018-09-17') echo 'selected';?>>17/09/2018</option>
+        <option value="2018-09-18" <?php if(!empty($_GET['date']) && $_GET['date'] == '2018-09-18') echo 'selected';?>>18/09/2018</option>
+        <option value="2018-09-19" <?php if(!empty($_GET['date']) && $_GET['date'] == '2018-09-19') echo 'selected';?>>19/09/2018</option>
+        <option value="2018-09-20" <?php if(!empty($_GET['date']) && $_GET['date'] == '2018-09-20') echo 'selected';?>>20/09/2018</option>
+        <option value="2018-09-21" <?php if(!empty($_GET['date']) && $_GET['date'] == '2018-09-21') echo 'selected';?>>21/09/2018</option>
+        <option value="2018-09-22" <?php if(!empty($_GET['date']) && $_GET['date'] == '2018-09-22') echo 'selected';?>>22/09/2018</option>
+        <option value="2018-09-24" <?php if(!empty($_GET['date']) && $_GET['date'] == '2018-09-24') echo 'selected';?>>24/09/2018</option>
       </select>
       <input type="hidden" name="page" value="programma">
     <form action="?page=programma" method="get">
-      <input type="text" name="postal" placeholder="Postcode ..." id="search">
+      <input type="text" name="postal" placeholder="Postcode ..." id="search" <?php if(!empty($_GET['postal'])) echo 'value="' . $_GET['postal'] . '"';?>>
       <input type="hidden" name="page" value="programma">
       <input type="submit" class="search remove" value=" ">
     </form>
-    <a href="?page=programma" alt="reset filter" class="reset">Reset Filter</a>
+    <!-- <a href="?page=programma" alt="reset filter" class="reset">Reset Filter</a> -->
+    <input type="submit" name="reset" class="reset" value="Reset Filter">
   </div>
 </section>
 <section class="events container ajaxSearch">

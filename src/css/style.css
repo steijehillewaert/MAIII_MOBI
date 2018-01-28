@@ -713,9 +713,12 @@ aside {
   margin-top: 1rem;
   display: inline-block;
   font-size: 1.5rem;
+  background: none;
+  padding: 0;
 
   &:hover {
     text-decoration: underline;
+    cursor: pointer;
   }
 }
 
