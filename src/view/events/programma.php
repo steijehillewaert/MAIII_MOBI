@@ -18,7 +18,7 @@
     <form action="?page=programma" method="get">
       <input type="text" name="postal" placeholder="Postcode ..." id="search">
       <input type="hidden" name="page" value="programma">
-      <input type="submit" class="search" value=" ">
+      <input type="submit" class="search remove" value=" ">
     </form>
     <a href="?page=programma" alt="reset filter" class="reset">Reset Filter</a>
   </div>

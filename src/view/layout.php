@@ -4,6 +4,9 @@
     <meta charset="utf-8">
     <meta http-equiv="Expires" content="30">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Informatie website rond de week van de mobiliteit">
+    <meta name="keywords" content="Week van de mobiliteit, mobiliteit, fiets, auto, strapdag, car free day">
+    <meta name="author" content="Steije Hillewaert">
     <title>Week van de mobiliteit</title>
     <script>
      WebFontConfig = {
@@ -34,7 +37,7 @@
             </ul>
           </nav>
           <form class="" action="index.php?page=programma" method="get">
-            <input type="text" name="query" placeholder="Zoek een actie" id="search" class="search_field" value="">
+            <input type="text" name="query" placeholder="Zoek een actie ..." id="search" class="search_field" value="">
             <input type="hidden" name="page" value="programma" >
             <input type="submit" class="search" value=" ">
           </form>

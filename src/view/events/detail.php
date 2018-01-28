@@ -17,7 +17,7 @@
         <?php else : ?>
           <li class="date"><?php echo date('d/m/Y', strtotime($events['start']));?> - <?php echo date('d/m/Y', strtotime($events['end']));?></li>
         <?php endif ?>
-        <li class="time"><?php echo date('G:i', strtotime($events['start']));?> - <?php echo date('G:i', strtotime($events['end']));?></li>
+        <li class="time"><?php echo date('H:i', strtotime($events['start']));?> - <?php echo date('H:i', strtotime($events['end']));?></li>
         <li class="link"><a href="<?php echo $events['link'];?>" target="_blank">Link</a></li>
       </ul>
     </div>

@@ -37,7 +37,7 @@
   </section>
 
   <section class="container watisdeweek">
-    <picture>
+    <picture class="picturecontainerHome">
       <source type="image/webp" srcset="assets/img/weekvanmobiliteit.webp">
       <img src="assets/img/weekvanmobiliteit.png" alt="">
     </picture>
