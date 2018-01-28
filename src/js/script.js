@@ -61,7 +61,7 @@ const handleResetButton = () => {
       .map(event => createEvent(event))
       .join(``);
     $postalInput.value = ``;
-    $dateInput.value = `all`;
+    $dateInput.value = `2018-09-16`;
   };
 };
 
