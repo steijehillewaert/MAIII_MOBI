@@ -1,7 +1,7 @@
 <section class="programma container">
   <div class="container">
     <h1>Programma</h1>
-    <form class="" action="?page=programma" method="get">
+    <form class="mobileSearch-Programma" action="?page=programma" method="get">
       <select name='date' id='date'>
         <option disabled selected value="2018-09-16" class="select">Kies een datum</option>
         <option value="2018-09-09" <?php if(!empty($_GET['date']) && $_GET['date'] == '2018-09-09') echo 'selected';?>>09/09/2018</option>

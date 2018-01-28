@@ -88,7 +88,6 @@ class EventsController extends Controller {
       );
     }
 
-
     if (isset($_GET['postal'])) {
       if(is_numeric($_GET['postal'])) {
       $conditions[] = array(
