@@ -1,5 +1,5 @@
 <div class="all">
-  <picture class="picturecontainer">
+  <picture class="picturecontainer duotone">
     <source type="image/webp" srcset="assets/events/<?php echo $events['code'];?>/banner.webp" height="400">
     <img src="assets/events/<?php echo $events['code'];?>/banner.jpg" alt="" height="400">
   </picture>
