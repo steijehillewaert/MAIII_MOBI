@@ -3,8 +3,13 @@ const $events = document.querySelector(`.ajaxSearch`);
 const $postalInput = document.querySelector(`[name="postal"]`);
 const $dateInput = document.querySelector(`[name="date"]`);
 const $resetButton = document.querySelector(`.reset`);
+const $noJS = document.querySelectorAll(`.noJS`);
 
 const init = () => {
+  $noJS.forEach(removeClass => {
+    removeClass.remove();
+  });
+
   if($searchInput){
     $searchInput.addEventListener(`input`, handleInputSearch);
   }
@@ -16,6 +21,7 @@ const init = () => {
   }
   if($resetButton){
     $resetButton.addEventListener(`click`, handleResetButton);
+    $resetButton.classList.remove(`hide`);
   }
 };
 
@@ -40,6 +46,7 @@ const handleInputSearch = () => {
 };
 
 const handleResetButton = () => {
+  // console.log(`test`);
   fetch(`index.php?page=programma`, {
     headers: new Headers({
       Accept: `application/json`
@@ -54,7 +61,7 @@ const handleResetButton = () => {
       .map(event => createEvent(event))
       .join(``);
     $postalInput.value = ``;
-    $dateInput.value = `2018-09-16`;
+    $dateInput.value = `all`;
   };
 };
 

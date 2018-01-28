@@ -619,7 +619,7 @@ aside {
 }
 
 .hide {
-  display: none;
+  display: none !important; /*stylelint-disable-line*/
 }
 
 .button {
