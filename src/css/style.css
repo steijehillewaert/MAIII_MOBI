@@ -865,6 +865,7 @@ aside {
 
   .partner_container {
     flex-direction: column;
+    align-items: center;
 
     & img {
       margin-bottom: 3rem;

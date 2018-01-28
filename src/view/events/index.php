@@ -64,10 +64,10 @@
   <section class="container partners">
     <h2>Partners</h2>
     <div class="partner_container">
-      <img src="assets/img/EU_Mobiliy_Week.svg" alt="">
-      <img src="assets/img/nmbs.svg" alt="">
-      <img src="assets/img/delijn.svg" alt="">
-      <img src="assets/img/vlaanderenmobi.svg" alt="">
+      <img src="assets/img/EU_Mobiliy_Week.svg" width="161">
+      <img src="assets/img/nmbs.svg" alt="" width="177">
+      <img src="assets/img/delijn.svg" alt="" width="113">
+      <img src="assets/img/vlaanderenmobi.svg" alt="" width="224">
     </div>
   </section>
 </main>
