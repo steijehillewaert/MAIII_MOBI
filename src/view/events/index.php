@@ -38,8 +38,21 @@
 
   <section class="container watisdeweek">
     <picture class="picturecontainerHome">
-      <source type="image/webp" srcset="assets/img/weekvanmobiliteit.webp">
-      <img src="assets/img/weekvanmobiliteit.png" alt="">
+      <source type="image/webp" sizes="(max-width: 460px) 100vw, 460px" srcset="assets/img/weekvanmobiliteit_zed8db_c_scale,w_200.webp 200w,
+      assets/img/weekvanmobiliteit_zed8db_c_scale,w_289.webp 289w,
+      assets/img/weekvanmobiliteit_zed8db_c_scale,w_361.webp 361w,
+      assets/img/weekvanmobiliteit_zed8db_c_scale,w_424.webp 424w,
+      assets/img/weekvanmobiliteit_zed8db_c_scale,w_460.webp 460w">
+        <img
+          sizes="(max-width: 460px) 100vw, 460px"
+          srcset="
+          assets/img/weekvanmobiliteit_zed8db_c_scale,w_200.png 200w,
+          assets/img/weekvanmobiliteit_zed8db_c_scale,w_289.png 289w,
+          assets/img/weekvanmobiliteit_zed8db_c_scale,w_361.png 361w,
+          assets/img/weekvanmobiliteit_zed8db_c_scale,w_424.png 424w,
+          assets/img/weekvanmobiliteit_zed8db_c_scale,w_460.png 460w"
+          src="assets/img/weekvanmobiliteit_zed8db_c_scale,w_460.png"
+          alt="">
     </picture>
     <div class="flextext">
       <h2>Wat is de week van de mobiliteit?</h2>
