@@ -14,19 +14,19 @@
         <option value="2018-09-22" <?php if(!empty($_GET['date']) && $_GET['date'] == '2018-09-22') echo 'selected';?>>22/09/2018</option>
         <option value="2018-09-24" <?php if(!empty($_GET['date']) && $_GET['date'] == '2018-09-24') echo 'selected';?>>24/09/2018</option>
       </select>
-      <input type="text" name="postal" placeholder="Postcode ..." id="search" <?php if(!empty($_GET['postal'])) echo 'value="' . $_GET['postal'] . '"';?>>
+      <input type="text" name="postal" placeholder="Postcode ..." <?php if(!empty($_GET['postal'])) echo 'value="' . $_GET['postal'] . '"';?>>
       <input type="hidden" name="page" value="programma">
       <input type="submit" class="search noJS" value=" ">
     </form>
     <input type="submit" name="reset" class="reset hide" value="Reset Filter">
-    <a href="?page=programma" alt="reset filter" class="reset noJS">Reset Filter</a>
+    <a href="?page=programma" class="reset noJS">Reset Filter</a>
   </div>
 </section>
 <section class="events container ajaxSearch">
 <?php foreach($events as $event): ?>
   <article class="event">
     <picture class="picturecontainer">
-      <source type="image/webp" srcset="assets/events/<?php echo $event['code'];?>/thumb.webp" height="350">
+      <source type="image/webp" srcset="assets/events/<?php echo $event['code'];?>/thumb.webp">
       <img src="assets/events/<?php echo $event['code'];?>/thumb.jpg" alt="" height="350">
     </picture>
     <?php if($event['startFormatted'] === $event['endFormatted']) : ?>

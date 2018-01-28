@@ -25,11 +25,7 @@ class EventsController extends Controller {
 
 
     //example: search on organiser_id
-    // $conditions[] = array(
-    //   'field' => 'organiser_id',
-    //   'comparator' => '=',
-    //   'value' => 8
-    // );
+
 
     //example: search on organiser name
     // $conditions[] = array(
@@ -39,11 +35,7 @@ class EventsController extends Controller {
     // );
 
     //example: search on tag name
-    // $conditions[] = array(
-    //   'field' => 'tag',
-    //   'comparator' => '=',
-    //   'value' => 'e-bike'
-    // );
+
 
     //example: 1-day events on september 17
     // $conditions[] = array(
@@ -100,6 +92,7 @@ class EventsController extends Controller {
       );
     }
 
+
     if (isset($_GET['postal'])) {
       $conditions[] = array(
         'field' => 'postal',
@@ -120,6 +113,22 @@ class EventsController extends Controller {
         'comparator' => '>=',
         // 'value' => '2018-09-17 00:00:00'
         'value' => $_GET['date'] . ' 00:00:00'
+      );
+    }
+
+    if(isset($_GET['organiser'])) {
+      $conditions[] = array(
+        'field' => 'organiser',
+        'comparator' => 'like',
+        'value' => $_GET['organiser']
+      );
+    }
+
+    if(isset($_GET['tag'])) {
+      $conditions[] = array(
+        'field' => 'tag',
+        'comparator' => '=',
+        'value' => $_GET['tag']
       );
     }
 

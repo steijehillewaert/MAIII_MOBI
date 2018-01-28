@@ -721,6 +721,20 @@ aside {
   }
 }
 
+.organiser {
+  color: white;
+
+  & li:hover {
+    background-color: var(--darkgreen);
+    color: white;
+  }
+
+  & a {
+    text-decoration: none;
+
+  }
+}
+
 .duotone::before {
   background-color: var(--green);
   content: '';

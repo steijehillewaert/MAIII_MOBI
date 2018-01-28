@@ -2,7 +2,6 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="Expires" content="30">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Informatie website rond de week van de mobiliteit">
     <meta name="keywords" content="Week van de mobiliteit, mobiliteit, fiets, auto, strapdag, car free day">
@@ -54,7 +53,7 @@
           <div class="nieuwsbrief">
             <h3>Nieuwsbrief</h3>
             <h3 class="small">Blijf op de hoogte van de laatste details en nieuwtjes</h3>
-            <input type="text" name="" value="" placeholder="abbonneer nu" class="search_field">
+            <input type="text" name="emailadres" placeholder="abbonneer nu" class="search_field">
             <input type="hidden" name="page" value="programma">
             <input type="submit" name="Verzenden" value="Verzenden" class="send">
           </div>

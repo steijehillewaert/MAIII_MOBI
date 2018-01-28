@@ -32,7 +32,7 @@
       <h3>Tags</h3>
       <ul>
         <?php foreach($events['tags'] as $tag): ?>
-          <li><?php echo $tag['tag'];?></li>
+          <a href="?tag=<?php echo $tag['tag'];?>&page=programma" class="organiser"><li><?php echo $tag['tag'];?></li></a>
         <?php endforeach;?>
       </ul>
 
@@ -51,7 +51,7 @@
       <h3>Organisers</h3>
       <ul>
         <?php foreach($events['organisers'] as $organiser): ?>
-          <li><?php echo $organiser['name'];?></li>
+          <a href="?organiser=<?php echo $organiser['name'];?>&page=programma" class="organiser"><li><?php echo $organiser['name'];?></li></a>
         <?php endforeach;?>
       </ul>
     </div>

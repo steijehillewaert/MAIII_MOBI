@@ -15,7 +15,7 @@
       <?php foreach($eventHighlights as $eventHighlight): ?>
         <article class="event">
           <picture class="picturecontainer">
-            <source type="image/webp" srcset="assets/events/<?php echo $eventHighlight['code'];?>/thumb.webp" height="350">
+            <source type="image/webp" srcset="assets/events/<?php echo $eventHighlight['code'];?>/thumb.webp">
             <img src="assets/events/<?php echo $eventHighlight['code'];?>/thumb.jpg" alt="" height="350">
           </picture>
           <h2 class="date_event"><?php echo date('d/m', strtotime($eventHighlight['start'])); ?></h2>
@@ -69,7 +69,7 @@
       <h3>Nieuwsbrief</h3>
       <p>Blijf op de hoogte van de laatste details en nieuwtjes</p>
       <form action="#" >
-        <input type="text" name="" value="" placeholder="uw emailadres ...">
+        <input type="text" name="emailadres" placeholder="uw emailadres ...">
         <input type="submit" value="Verzenden">
       </form>
     </div>
@@ -77,10 +77,10 @@
   <section class="container partners">
     <h2>Partners</h2>
     <div class="partner_container">
-      <img src="assets/img/EU_Mobiliy_Week.svg" width="161">
-      <img src="assets/img/nmbs.svg" alt="" width="177">
-      <img src="assets/img/delijn.svg" alt="" width="113">
-      <img src="assets/img/vlaanderenmobi.svg" alt="" width="224">
+      <img src="assets/img/EU_Mobiliy_Week.svg" width="161" alt="logo EU Mobiliy">
+      <img src="assets/img/nmbs.svg" alt="" width="177" alt="logo nmbs">
+      <img src="assets/img/delijn.svg" alt="" width="113" alt="logo de lijn">
+      <img src="assets/img/vlaanderenmobi.svg" alt="" width="224" alt="logo vlaanderen mobiliteit">
     </div>
   </section>
 </main>
