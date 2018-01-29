@@ -56,7 +56,7 @@
     </picture>
     <div class="flextext">
       <h2>Wat is de week van de mobiliteit?</h2>
-      <p>De week van de mobiliteit (16 tot 22 september 2018) is <em>een initiatief van het Netwerk Duurzame Mobiliteit</em> om mensen een hele week onder andere de auto te minderen, mensen laten proeven van alternatieve verplaatsingen en tal van andere acties.</p><p> Zet je eigen actie op poten en wie weet win jij een mooie prijs! <em><a href='https://twitter.com/hashtag/goedopweg'>#goedopweg</a></em> </p>
+      <p>De week van de mobiliteit (16 tot 22 september 2018) is <em>een initiatief van het Netwerk Duurzame Mobiliteit</em> om mensen een hele week onder andere de auto te minderen, mensen laten proeven van alternatieve verplaatsingen en tal van andere acties.</p><p> Zet je eigen actie op poten en wie weet win jij een mooie prijs! <em><a href='https://twitter.com/intent/tweet?text=Ik%20ben%20&hashtags=goedopweg,weekvandemobiliteit'>#goedopweg</a></em> </p>
       <div class="buttonFlex">
         <a href="#" class="button pinkgreen">Ontdek de week <br>van de mobiliteit</a>
       </div>
