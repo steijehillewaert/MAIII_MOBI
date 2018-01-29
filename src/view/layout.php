@@ -53,7 +53,7 @@
           <div class="nieuwsbrief">
             <h3>Nieuwsbrief</h3>
             <h3 class="small">Blijf op de hoogte van de laatste details en nieuwtjes</h3>
-            <input type="text" name="emailadres" placeholder="abbonneer nu" class="search_field">
+            <input type="text" name="emailadres" placeholder="abonneer nu" class="search_field">
             <input type="hidden" name="page" value="programma">
             <input type="submit" name="Verzenden" value="Verzenden" class="send">
           </div>
