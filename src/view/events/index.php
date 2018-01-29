@@ -57,7 +57,9 @@
     <div class="flextext">
       <h2>Wat is de week van de mobiliteit?</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pretium neque ante, id volutpat metus pulvinar non. Fusce quis magna fringilla, volutpat est eget, congue tortor. Phasellus ac pellentesque arcu, feugiat ultrices nisl. Suspendisse potenti. </p>
-      <a href="#" class="button pinkgreen">Ontdek de week <br>van de mobiliteit</a>
+      <div class="buttonFlex">
+        <a href="#" class="button pinkgreen">Ontdek de week <br>van de mobiliteit</a>
+      </div>
     </div>
   </section>
   <section class="news container">

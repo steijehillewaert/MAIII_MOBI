@@ -649,6 +649,10 @@ aside {
   }
 }
 
+.buttonFlex {
+  display: inline-inline-block;
+}
+
 .location {
 
   &::before {
