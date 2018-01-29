@@ -38,9 +38,13 @@ const handleInputSearch = () => {
 
 
   const parse = results => {
-    $events.innerHTML = results
-      .map(event => createEvent(event))
-      .join(``);
+    if(results.length === 0){
+      $events.innerHTML = `<p>Geen resultaten gevonden :'(</p>`;
+    }else{
+      $events.innerHTML = results
+        .map(event => createEvent(event))
+        .join(``);
+    }
   };
 
 };
@@ -79,54 +83,61 @@ const handleFilterSearch = () => {
 
 
   const parseFilter = results => {
-    $events.innerHTML = results
-      .map(event => createEvent(event))
-      .join(``);
+    if(results.length === 0){
+      $events.innerHTML = `<p>Geen resultaten gevonden :'(</p>`;
+    }else{
+      $events.innerHTML = results
+        .map(event => createEvent(event))
+        .join(``);
+    }
   };
-
 };
 
+
+
 const createEvent = event => {
-  // console.log(event);
+  console.log(event);
+
   if(event.startFormatted === event.endFormatted){
     return `
-    <article class="event">
-      <picture class="picturecontainer">
-        <source type="image/webp" srcset="assets/events/${event.code}/thumb.webp" height="350">
-        <img src="assets/events/${event.code}/thumb.jpg" alt="" height="350">
-      </picture>
-      <h2 class="date_event">${event.startFormatted}</h2>
-      <div class="event_container">
-        <div class="top_event">
-          <p>${event.city}</p>
-          <p>${event.startTimeFormatted} - ${event.endTimeFormatted}</p>
+      <article class="event">
+        <picture class="picturecontainer">
+          <source type="image/webp" srcset="assets/events/${event.code}/thumb.webp" height="350">
+          <img src="assets/events/${event.code}/thumb.jpg" alt="" height="350">
+        </picture>
+        <h2 class="date_event">${event.startFormatted}</h2>
+        <div class="event_container">
+          <div class="top_event">
+            <p>${event.city}</p>
+            <p>${event.startTimeFormatted} - ${event.endTimeFormatted}</p>
+          </div>
+          <h2 class="event_title">${event.title}</h2>
+          <p class="shortinfo">${event.shortinfo}</p>
+          <a href="index.php?page=detail&amp;id=${event.id}" class="event_link">Meer info</a>
         </div>
-        <h2 class="event_title">${event.title}</h2>
-        <p class="shortinfo">${event.shortinfo}</p>
-        <a href="index.php?page=detail&amp;id=${event.id}" class="event_link">Meer info</a>
-      </div>
-    </article>
-    `;
+      </article>
+      `;
   }else{
     return `
-    <article class="event">
-      <picture class="picturecontainer">
-        <source type="image/webp" srcset="assets/events/${event.code}/thumb.webp" height="350">
-        <img src="assets/events/${event.code}/thumb.jpg" alt="" height="350">
-      </picture>
-      <h2 class="date_event">${event.startFormatted} - ${event.endFormatted}</h2>
-      <div class="event_container">
-        <div class="top_event">
-          <p>${event.city}</p>
-          <p>${event.startTimeFormatted} - ${event.endTimeFormatted}</p>
+      <article class="event">
+        <picture class="picturecontainer">
+          <source type="image/webp" srcset="assets/events/${event.code}/thumb.webp" height="350">
+          <img src="assets/events/${event.code}/thumb.jpg" alt="" height="350">
+        </picture>
+        <h2 class="date_event">${event.startFormatted} - ${event.endFormatted}</h2>
+        <div class="event_container">
+          <div class="top_event">
+            <p>${event.city}</p>
+            <p>${event.startTimeFormatted} - ${event.endTimeFormatted}</p>
+          </div>
+          <h2 class="event_title">${event.title}</h2>
+          <p class="shortinfo">${event.shortinfo}</p>
+          <a href="index.php?page=detail&amp;id=${event.id}" class="event_link">Meer info</a>
         </div>
-        <h2 class="event_title">${event.title}</h2>
-        <p class="shortinfo">${event.shortinfo}</p>
-        <a href="index.php?page=detail&amp;id=${event.id}" class="event_link">Meer info</a>
-      </div>
-    </article>
-    `;
+      </article>
+      `;
   }
+
 };
 
 init();

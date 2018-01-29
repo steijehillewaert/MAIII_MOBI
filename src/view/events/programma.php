@@ -24,27 +24,33 @@
     <a href="?page=programma" class="reset noJS">Reset Filter</a>
   </div>
 </section>
+<?php if($events): ?>
 <section class="events container ajaxSearch">
-<?php foreach($events as $event): ?>
-  <article class="event">
-    <picture class="picturecontainer">
-      <source type="image/webp" srcset="assets/events/<?php echo $event['code'];?>/thumb.webp">
-      <img src="assets/events/<?php echo $event['code'];?>/thumb.jpg" alt="" height="350">
-    </picture>
-    <?php if($event['startFormatted'] === $event['endFormatted']) : ?>
-      <h2 class="date_event"><?php echo $event['startFormatted'] ?></h2>
-    <?php else : ?>
-      <h2 class="date_event"><?php echo $event['startFormatted'] ?> - <?php echo $event['endFormatted'] ?></h2>
-    <?php endif ?>
-    <div class="event_container">
-      <div class="top_event">
-        <p><?php echo $event['city'] ?></p>
-        <p><?php echo $event['startTimeFormatted'] ?> - <?php echo $event['endTimeFormatted'] ?></p>
+  <?php foreach($events as $event): ?>
+    <article class="event">
+      <picture class="picturecontainer">
+        <source type="image/webp" srcset="assets/events/<?php echo $event['code'];?>/thumb.webp">
+        <img src="assets/events/<?php echo $event['code'];?>/thumb.jpg" alt="" height="350">
+      </picture>
+      <?php if($event['startFormatted'] === $event['endFormatted']) : ?>
+        <h2 class="date_event"><?php echo $event['startFormatted'] ?></h2>
+      <?php else : ?>
+        <h2 class="date_event"><?php echo $event['startFormatted'] ?> - <?php echo $event['endFormatted'] ?></h2>
+      <?php endif ?>
+      <div class="event_container">
+        <div class="top_event">
+          <p><?php echo $event['city'] ?></p>
+          <p><?php echo $event['startTimeFormatted'] ?> - <?php echo $event['endTimeFormatted'] ?></p>
+        </div>
+        <h2 class="event_title"><?php echo $event['title']; ?></h2>
+        <p class="shortinfo"><?php echo $event['shortinfo'] ?></p>
+        <a href="index.php?page=detail&amp;id=<?php echo $event['id']; ?>" class="event_link">Meer info</a>
       </div>
-      <h2 class="event_title"><?php echo $event['title']; ?></h2>
-      <p class="shortinfo"><?php echo $event['shortinfo'] ?></p>
-      <a href="index.php?page=detail&amp;id=<?php echo $event['id']; ?>" class="event_link">Meer info</a>
-    </div>
-  </article>
-<?php endforeach;?>
-</section>
+    </article>
+  <?php endforeach;?>
+  </section>
+<?php else :?>
+  <section class="events container ajaxSearch">
+    <p>Geen resultaten gevonden :'(</p>
+  </section>
+<?php endif ?>

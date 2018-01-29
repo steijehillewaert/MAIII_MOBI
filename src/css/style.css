@@ -28,6 +28,11 @@ em {
   }
 }
 
+.error {
+  text-align: center;
+  justify-content: center;
+}
+
 .hero {
   background-image: url(../assets/img/hero.png);
   background-size: cover;
@@ -609,6 +614,10 @@ aside {
 .flextext {
   display: flex;
   flex-direction: column;
+
+  & p {
+    margin-bottom: 1rem;
+  }
 }
 
 .partner_container {

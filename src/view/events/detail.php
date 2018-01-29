@@ -1,3 +1,4 @@
+<?php if($events): ?>
 <div class="all">
   <picture class="picturecontainer duotone">
     <source type="image/webp" srcset="assets/events/<?php echo $events['code'];?>/banner.webp" height="400">
@@ -101,3 +102,30 @@
         </article>
     <?php endforeach;?>
   </section>
+<?php else : ?>
+  <main class="flex container detail error">
+    <section>
+      <h2 class="detail_title">Dit event bestaat niet :'(</h2>
+      <h3 class="detail_title">Misschien zijn deze events wel iets voor jou</h3>
+  </main>
+  <section class="events container">
+    <?php foreach($eventHighlights as $eventHighlight): ?>
+        <article class="event">
+          <picture class="picturecontainer">
+            <source type="image/webp" srcset="assets/events/<?php echo $eventHighlight['code'];?>/thumb.webp" height="350">
+            <img src="assets/events/<?php echo $eventHighlight['code'];?>/thumb.jpg" alt="" height="350">
+          </picture>
+          <h2 class="date_event"><?php echo date('d/m', strtotime($eventHighlight['start'])); ?></h2>
+          <div class="event_container">
+            <div class="top_event">
+              <p><?php echo $eventHighlight['city'] ?></p>
+              <p><?php echo date('H:i', strtotime($eventHighlight['start'])); ?> - <?php echo date('H:i', strtotime($eventHighlight['end'])); ?></p>
+            </div>
+            <h2 class="event_title"><?php echo $eventHighlight['title']; ?></h2>
+            <p class="shortinfo"><?php echo $eventHighlight['shortinfo'] ?></p>
+            <a href="index.php?page=detail&amp;id=<?php echo $eventHighlight['id']; ?>" class="event_link">Meer info</a>
+          </div>
+        </article>
+    <?php endforeach;?>
+  </section>
+<?php endif ?>
