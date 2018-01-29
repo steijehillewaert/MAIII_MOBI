@@ -60,8 +60,8 @@
           <div class="social">
             <h3>Week van de mobiliteit</h3>
             <h3 class="small">16 tot 22 september 2018</h3>
-            <a href="https://www.facebook.com/sharer/sharer.php?u=student.howest.be/steije.hillewaert/20172018/ma3/mobi/index.php?page=<?php echo $currentPage ?>"><img src="assets/img/facebook.svg" alt="facebook logo" class="socialbutton"></a>
-            <a href="https://twitter.com/intent/tweet?text=Ik%20ben&hashtags=goedopweg,weekvandemobiliteit"><img src="assets/img/twitter.svg" alt="twitter logo" class="socialbutton"></a>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=student.howest.be/steije.hillewaert/20172018/ma3/mobi/index.php?page=<?php echo $currentPage ?>" target="_blank"><img src="assets/img/facebook.svg" alt="facebook logo" class="socialbutton"></a>
+            <a href="https://twitter.com/intent/tweet?text=Ik%20ben&hashtags=goedopweg,weekvandemobiliteit" target="_blank"><img src="assets/img/twitter.svg" alt="twitter logo" class="socialbutton"></a>
           </div>
         </div>
       </footer>
