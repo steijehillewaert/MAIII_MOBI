@@ -96,7 +96,7 @@ const handleFilterSearch = () => {
 
 
 const createEvent = event => {
-  console.log(event);
+  // console.log(event);
 
   if(event.startFormatted === event.endFormatted){
     return `
