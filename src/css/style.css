@@ -181,6 +181,7 @@ h2 {
 
   & form {
     margin-top: 3rem;
+    display: flex;
   }
 
   & .container {
@@ -950,8 +951,9 @@ aside {
     flex-direction: column;
 
     & li {
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
       text-align: center;
+      margin-right: 0;
     }
   }
 
@@ -1009,7 +1011,18 @@ aside {
     & input[type='text'] {
       flex-grow: 1;
     }
+  }
 
+  input, select {
+    font-size: 1.5rem;
+  }
+
+  nav a {
+    font-size: 2rem;
+  }
+
+  .reset {
+    font-size: 1.7rem;
   }
 
 }
