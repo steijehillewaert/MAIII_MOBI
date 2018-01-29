@@ -1,27 +1,13 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
-    <title>Group 5</title>
-    <desc>Created with Sketch.</desc>
-    <defs>
-        <rect id="path-1" x="0" y="0" width="32" height="32"></rect>
-    </defs>
-    <g id="Navigation/Blank" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-1156.000000, -33.000000)">
-        <g id="Group-4">
-            <g id="Group-5" transform="translate(1156.000000, 33.000000)">
-                <g id="Group-Copy-2">
-                    <g id="Group-2">
-                        <g id="Rectangle-10">
-                            <use fill="#E91049" fill-rule="evenodd" xlink:href="#path-1"></use>
-                            <rect stroke="#E91049" stroke-width="1" x="0.5" y="0.5" width="31" height="31"></rect>
-                        </g>
-                    </g>
-                </g>
-                <g id="Group-3" transform="translate(9.000000, 9.000000)" stroke="#FFFFFF" stroke-width="2">
-                    <circle id="Oval-2" cx="10" cy="5" r="5"></circle>
-                    <path d="M6.5,8.5 L0,15" id="Line" stroke-linecap="square"></path>
-                </g>
-            </g>
-        </g>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32">
+  <defs>
+    <path id="a" d="M0 0h32v32H0z"/>
+  </defs>
+  <g fill="none" fill-rule="evenodd">
+    <use fill="#E91049" xlink:href="#a"/>
+    <path stroke="#E91049" d="M.5.5h31v31H.5z"/>
+    <g stroke="#FFF" stroke-width="2" transform="translate(9 9)">
+      <circle cx="10" cy="5" r="5"/>
+      <path stroke-linecap="square" d="M6.5 8.5L0 15"/>
     </g>
+  </g>
 </svg>

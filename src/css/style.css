@@ -15,6 +15,24 @@ body {
   font-weight: 200;
 }
 
+em {
+  font-weight: 300;
+
+  & a {
+    text-decoration: none;
+    color: black;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.error {
+  text-align: center;
+  justify-content: center;
+}
+
 .hero {
   background-image: url(../assets/img/hero.png);
   background-size: cover;
@@ -79,7 +97,7 @@ nav {
   color: var(--pink);
 }
 
-header {
+.nav {
   background-color: black;
 }
 
@@ -181,6 +199,7 @@ h2 {
 
   & form {
     margin-top: 3rem;
+    display: flex;
   }
 
   & .container {
@@ -193,13 +212,23 @@ h2 {
   min-width: 30rem;
   min-height: 35rem;
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   position: relative;
   margin: 1rem;
   flex-grow: 1;
 }
 
-.imagefit {
+.picturecontainer {
+  object-fit: cover;
+  overflow: hidden;
+  width: 100%;
+}
+
+.centerimage {
+  justify-content: space-around !important; /*stylelint-disable-line*/
+}
+
+.picturecontainer source, .picturecontainer img {
   width: 100%;
   object-fit: cover;
 }
@@ -269,6 +298,7 @@ select {
   background: url(../assets/img/dropdown.svg) no-repeat 100% 0 white;
   width: 15rem;
   -webkit-appearance: none; /*stylelint-disable-line*/
+  -webkit-border-radius: 0; /*stylelint-disable-line*/
 }
 
 .search {
@@ -374,8 +404,8 @@ aside {
     border-radius: 2rem;
     text-align: center;
     margin-bottom: .5rem;
-    margin-left: 0 !important;
-    margin-top: 0 !important;
+    margin-left: 0 !important; /*stylelint-disable-line*/
+    margin-top: 0 !important; /*stylelint-disable-line*/
   }
 
   & address {
@@ -482,7 +512,7 @@ aside {
   justify-content: space-between;
   font-size: 1.6rem;
 
-  & li{
+  & li {
     display: flex;
     align-items: center;
   }
@@ -510,14 +540,26 @@ aside {
   align-items: center;
   flex-direction: column;
   height: 40rem;
-  padding: 7rem;
-  background-size: cover !important; /*stylelint-disable-line*/
-  background-position: center !important; /*stylelint-disable-line*/
+  width: 100%;
 }
 
 .title {
+  width: 100%;
+  height: 80%;
   display: flex;
-  align-self: flex-end;
+  align-items: center;
+}
+
+.detail_header_all {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.all {
+  position: relative;
+  height: 40rem;
+  width: 100%;
 }
 
 .detail_banner {
@@ -525,7 +567,6 @@ aside {
 }
 
 .detail {
-  margin-top: -6rem;
   margin-bottom: 4rem;
 
   & h3 {
@@ -573,6 +614,10 @@ aside {
 .flextext {
   display: flex;
   flex-direction: column;
+
+  & p {
+    margin-bottom: 1rem;
+  }
 }
 
 .partner_container {
@@ -596,7 +641,7 @@ aside {
 }
 
 .hide {
-  display: none;
+  display: none !important; /*stylelint-disable-line*/
 }
 
 .button {
@@ -620,6 +665,14 @@ aside {
     text-align: center;
     align-self: center;
   }
+
+  &:hover {
+    box-shadow: none;
+  }
+}
+
+.buttonFlex {
+  display: inline-block;
 }
 
 .location {
@@ -680,8 +733,64 @@ aside {
 
 }
 
+.reset {
+  color: white;
+  text-decoration: none;
+  margin-top: 1rem;
+  display: inline-block;
+  font-size: 1.5rem;
+  background: none;
+  padding: 0;
+
+  &:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
+
+.organiser {
+  color: white;
+
+  & li:hover {
+    background-color: var(--darkgreen);
+    color: white;
+  }
+
+  & a {
+    text-decoration: none;
+
+  }
+}
+
+.duotone::before {
+  background-color: var(--green);
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  mix-blend-mode: darken;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.duotone::after {
+  background-color: var(--blue);
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  mix-blend-mode: lighten;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
 
 @media only screen and (max-width: 960px) {
+
+  .title {
+    justify-content: center;
+  }
 
   .container {
     margin: 0 5%;
@@ -690,14 +799,15 @@ aside {
   .watisdeweek {
     margin-top: 6rem;
     margin-bottom: 6rem;
+  }
 
-    & img {
-      width: 50%;
-    }
+  .picturecontainerHome img, .picturecontainerHome source {
+    width: 100%;
   }
 
   .flextext {
-    width: 100%;
+    width: 77%;
+    margin-left: 5rem;
   }
 
   .hero .container {
@@ -708,6 +818,7 @@ aside {
 
     margin-top: 4rem;
     margin-bottom: 4rem;
+    background-position: center;
 
     & .container {
       margin: 0;
@@ -715,7 +826,6 @@ aside {
   }
 
   .detail {
-    margin-top: -6rem;
     margin-bottom: 5rem;
   }
 
@@ -757,6 +867,7 @@ aside {
 
   .flextext {
     width: 100%;
+    margin-left: 0;
   }
 
   .news {
@@ -779,7 +890,7 @@ aside {
   .detail {
     flex-direction: column;
     margin-bottom: 4rem;
-    margin-top: 0;
+    margin-top: 6rem;
   }
 
   .pratical {
@@ -820,7 +931,8 @@ aside {
 @media only screen and (max-width: 700px) {
 
   .partner_container {
-    flex-direction: column;
+    justify-content: space-around;
+    flex-wrap: wrap;
 
     & img {
       margin-bottom: 3rem;
@@ -843,6 +955,7 @@ aside {
 
   .programma {
     background-position: center;
+    padding: 2rem;
   }
 
   .detail_info-items {
@@ -851,10 +964,6 @@ aside {
 
   .detail_info {
     transform: translateY(-16rem);
-  }
-
-  .detail section {
-    margin-top: -17rem;
   }
 
   .title {
@@ -868,8 +977,9 @@ aside {
     flex-direction: column;
 
     & li {
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
       text-align: center;
+      margin-right: 0;
     }
   }
 
@@ -897,6 +1007,56 @@ aside {
   .social {
     text-align: center;
     margin-top: 4.5rem;
+  }
+
+  .mobileSearch {
+    width: 100%;
+    display: flex;
+
+    & input[type='text'] {
+      flex-grow: 1;
+    }
+  }
+
+  .mobileSearch-Programma {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    & select {
+      width: 100%;
+    }
+  }
+
+  .mobile-input-flex {
+    display: flex;
+    width: 100%;
+    align-items: baseline;
+
+    & input[type='text'] {
+      flex-grow: 1;
+    }
+  }
+
+  input, select {
+    font-size: 1.5rem;
+  }
+
+  nav a {
+    font-size: 2rem;
+  }
+
+  .reset {
+    font-size: 1.7rem;
+  }
+
+  .buttonFlex {
+
+    & .pinkgreen {
+      width: 100%;
+      text-align: center;
+    }
   }
 
 }

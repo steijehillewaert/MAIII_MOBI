@@ -25,25 +25,13 @@ class EventsController extends Controller {
 
 
     //example: search on organiser_id
-    // $conditions[] = array(
-    //   'field' => 'organiser_id',
-    //   'comparator' => '=',
-    //   'value' => 8
-    // );
+
 
     //example: search on organiser name
-    // $conditions[] = array(
-    //   'field' => 'organiser',
-    //   'comparator' => 'like',
-    //   'value' => 'brussel'
-    // );
+
 
     //example: search on tag name
-    // $conditions[] = array(
-    //   'field' => 'tag',
-    //   'comparator' => '=',
-    //   'value' => 'e-bike'
-    // );
+
 
     //example: 1-day events on september 17
     // $conditions[] = array(
@@ -101,11 +89,19 @@ class EventsController extends Controller {
     }
 
     if (isset($_GET['postal'])) {
+      if(is_numeric($_GET['postal'])) {
       $conditions[] = array(
         'field' => 'postal',
         'comparator' => 'like',
         'value' => $_GET['postal']
       );
+    } else {
+        $conditions[] = array(
+          'field' => 'city',
+          'comparator' => 'like',
+          'value' => $_GET['postal']
+        );
+      }
     }
 
     if(isset($_GET['date'])) {
@@ -123,9 +119,26 @@ class EventsController extends Controller {
       );
     }
 
+    if(isset($_GET['organiser'])) {
+      $conditions[] = array(
+        'field' => 'organiser',
+        'comparator' => 'like',
+        'value' => $_GET['organiser']
+      );
+    }
+
+    if(isset($_GET['tag'])) {
+      $conditions[] = array(
+        'field' => 'tag',
+        'comparator' => '=',
+        'value' => $_GET['tag']
+      );
+    }
+
     $events = $this->eventDAO->search($conditions);
     foreach($events as &$event) {
       $event['startFormatted'] = date('d/m', strtotime($event['start']));
+      $event['endFormatted'] = date('d/m', strtotime($event['end']));
       $event['startTimeFormatted'] = date('H:i', strtotime($event['start']));
       $event['endTimeFormatted'] = date('H:i', strtotime($event['end']));
     }

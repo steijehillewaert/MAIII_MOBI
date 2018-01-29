@@ -1,8 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="nl">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Informatie website rond de week van de mobiliteit">
+    <meta name="keywords" content="Week van de mobiliteit, mobiliteit, fiets, auto, strapdag, car free day">
+    <meta name="author" content="Steije Hillewaert">
     <title>Week van de mobiliteit</title>
     <script>
      WebFontConfig = {
@@ -22,7 +25,7 @@
     <?php echo $css;?>
   </head>
   <body>
-      <header>
+      <header class="nav">
         <div class="container header">
           <nav>
             <ul>
@@ -32,8 +35,8 @@
               <li><a href="#">Partners</a></li>
             </ul>
           </nav>
-          <form class="" action="index.php?page=programma" method="get">
-            <input type="text" name="query" placeholder="Zoek een actie" id="search" class="search_field">
+          <form class="mobileSearch" action="index.php?page=programma" method="get">
+            <input type="text" name="query" placeholder="Zoek een actie ..." id="search" class="search_field" <?php if(!empty($_GET['query'])) echo 'value="' . $_GET['query'] . '"';?>>
             <input type="hidden" name="page" value="programma" >
             <input type="submit" class="search" value=" ">
           </form>
@@ -50,15 +53,15 @@
           <div class="nieuwsbrief">
             <h3>Nieuwsbrief</h3>
             <h3 class="small">Blijf op de hoogte van de laatste details en nieuwtjes</h3>
-            <input type="text" name="" value="" placeholder="abbonneer nu" class="search_field">
+            <input type="text" name="emailadres" placeholder="abonneer nu" class="search_field">
             <input type="hidden" name="page" value="programma">
             <input type="submit" name="Verzenden" value="Verzenden" class="send">
           </div>
           <div class="social">
             <h3>Week van de mobiliteit</h3>
             <h3 class="small">16 tot 22 september 2018</h3>
-            <a href="#"><img src="assets/img/facebook.svg" alt="" class="socialbutton"></a>
-            <a href="#"><img src="assets/img/twitter.svg" alt="" class="socialbutton"></a>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=student.howest.be/steije.hillewaert/20172018/ma3/mobi/index.php?page=<?php echo $currentPage ?>" target="_blank"><img src="assets/img/facebook.svg" alt="facebook logo" class="socialbutton"></a>
+            <a href="https://twitter.com/intent/tweet?text=Ik%20ben&hashtags=goedopweg,weekvandemobiliteit" target="_blank"><img src="assets/img/twitter.svg" alt="twitter logo" class="socialbutton"></a>
           </div>
         </div>
       </footer>

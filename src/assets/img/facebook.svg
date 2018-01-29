@@ -1,14 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="31px" height="31px" viewBox="0 0 31 31" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
-    <title>facebook-logo</title>
-    <desc>Created with Sketch.</desc>
-    <defs></defs>
-    <g id="Footer_Desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-1094.000000, -107.000000)">
-        <g id="Group-2" transform="translate(1094.000000, 107.000000)" fill="#E91049" fill-rule="nonzero">
-            <g id="facebook-logo">
-                <path d="M31,5.16701111 C31,2.4521 28.5489333,0 25.8333333,0 L5.16666667,0 C2.45106667,0 0,2.4521 0,5.16701111 L0,25.8329889 C0,28.5479 2.45106667,31 5.16701111,31 L15.5,31 L15.5,19.2888889 L11.7111111,19.2888889 L11.7111111,14.1222222 L15.5,14.1222222 L15.5,12.1092889 C15.5,8.63763333 18.1067556,5.51111111 21.3125,5.51111111 L25.4888889,5.51111111 L25.4888889,10.6777778 L21.3125,10.6777778 C20.8554222,10.6777778 20.3222222,11.2326778 20.3222222,12.0638222 L20.3222222,14.1222222 L25.4888889,14.1222222 L25.4888889,19.2888889 L20.3222222,19.2888889 L20.3222222,31 L25.8333333,31 C28.5489333,31 31,28.5479 31,25.8329889 L31,5.16701111 Z" id="Facebook__x28_alt_x29_"></path>
-            </g>
-        </g>
-    </g>
+<svg xmlns="http://www.w3.org/2000/svg" width="31" height="31">
+  <path fill="#E91049" d="M31 5c0-3-2-5-5-5H5C2 0 0 2 0 5v21c0 3 2 5 5 5h11V19h-4v-5h4v-2c0-3 2-6 5-6h4v5h-4l-1 1v2h5v5h-5v12h6c3 0 5-2 5-5V5z"/>
 </svg>
