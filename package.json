@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "production": "npm run clean && npm run copydist && NODE_ENV=production webpack -p",
-    "development": "NODE_ENV=development webpack-dev-server --host 192.168.0.119",
+    "development": "NODE_ENV=development webpack-dev-server --host 192.168.0.144",
     "copydist": "ditto ./src/ ./dist/ && rm -rf ./dist/css && rm -rf ./dist/js",
     "clean": "rm -rf ./dist"
   },
